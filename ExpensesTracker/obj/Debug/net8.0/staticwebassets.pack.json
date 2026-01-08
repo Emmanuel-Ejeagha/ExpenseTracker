@@ -265,6 +265,10 @@
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {
+      "Id": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/profilePic.jpg",
+      "PackagePath": "staticwebassets/profilePic.jpg"
+    },
+    {
       "Id": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/site.webmanifest",
       "PackagePath": "staticwebassets/site.webmanifest"
     },

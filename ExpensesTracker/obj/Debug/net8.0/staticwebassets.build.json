@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HCxASh5BROMiLc8DUfjt2VS20+1s3preIqxztZchC0E=",
+  "Hash": "UWPvbXaGVnD8KpYTgVRsrjex5t4hrMU7q9jFBVW0e2c=",
   "Source": "ExpensesTracker",
   "BasePath": "_content/ExpensesTracker",
   "Mode": "Default",
@@ -136,8 +136,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "7kk74cawn1",
-      "Integrity": "1zf1Le8NWjMpedjDW5Cxb7tuN45ZeUZP5JYas1YbuF8=",
+      "Fingerprint": "dyf04ambri",
+      "Integrity": "O6PzVREwBTCFDvFnpHRSH0GAh0yduNo2fdsgMRU5mF4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/site.css"
@@ -1424,6 +1424,27 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/LICENSE.txt"
     },
     {
+      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/profilePic.jpg",
+      "SourceId": "ExpensesTracker",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "BasePath": "_content/ExpensesTracker",
+      "RelativePath": "profilePic#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "if1lel7pw8",
+      "Integrity": "fuyCNVIEwoBMPUOxVZZfvhJgVSW4u5cMYD2W+uT1eaQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/profilePic.jpg"
+    },
+    {
       "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/site.webmanifest",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
@@ -1693,51 +1714,6 @@
       ]
     },
     {
-      "Route": "css/site.7kk74cawn1.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/css/site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1275"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"1zf1Le8NWjMpedjDW5Cxb7tuN45ZeUZP5JYas1YbuF8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 05 Jan 2026 15:32:05 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "7kk74cawn1"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-1zf1Le8NWjMpedjDW5Cxb7tuN45ZeUZP5JYas1YbuF8="
-        }
-      ]
-    },
-    {
       "Route": "css/site.css",
       "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/css/site.css",
       "Selectors": [],
@@ -1748,7 +1724,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1275"
+          "Value": "2382"
         },
         {
           "Name": "Content-Type",
@@ -1756,11 +1732,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"1zf1Le8NWjMpedjDW5Cxb7tuN45ZeUZP5JYas1YbuF8=\""
+          "Value": "\"O6PzVREwBTCFDvFnpHRSH0GAh0yduNo2fdsgMRU5mF4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 Jan 2026 15:32:05 GMT"
+          "Value": "Wed, 07 Jan 2026 19:59:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1770,7 +1746,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-1zf1Le8NWjMpedjDW5Cxb7tuN45ZeUZP5JYas1YbuF8="
+          "Value": "sha256-O6PzVREwBTCFDvFnpHRSH0GAh0yduNo2fdsgMRU5mF4="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.dyf04ambri.css",
+      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/css/site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2382"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O6PzVREwBTCFDvFnpHRSH0GAh0yduNo2fdsgMRU5mF4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 Jan 2026 19:59:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dyf04ambri"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-O6PzVREwBTCFDvFnpHRSH0GAh0yduNo2fdsgMRU5mF4="
         }
       ]
     },
@@ -6937,6 +6958,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk="
+        }
+      ]
+    },
+    {
+      "Route": "profilePic.if1lel7pw8.jpg",
+      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/profilePic.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1716589"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fuyCNVIEwoBMPUOxVZZfvhJgVSW4u5cMYD2W+uT1eaQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 Jan 2026 19:53:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "if1lel7pw8"
+        },
+        {
+          "Name": "label",
+          "Value": "profilePic.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fuyCNVIEwoBMPUOxVZZfvhJgVSW4u5cMYD2W+uT1eaQ="
+        }
+      ]
+    },
+    {
+      "Route": "profilePic.jpg",
+      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/profilePic.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1716589"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fuyCNVIEwoBMPUOxVZZfvhJgVSW4u5cMYD2W+uT1eaQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 07 Jan 2026 19:53:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fuyCNVIEwoBMPUOxVZZfvhJgVSW4u5cMYD2W+uT1eaQ="
         }
       ]
     },
