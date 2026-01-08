@@ -30,6 +30,7 @@ body {
   margin-bottom: 60px;
   background-color: #12161d;
   color: #fff;
+  overflow: hidden;
 }
 
 /* Button  */
@@ -39,6 +40,134 @@ body {
   box-shadow: none;
 }
 
+/* NavBar  */
+nav.navbar {
+  background-color: rgba(18, 22, 29);
+}
+
+nav.navbar i {
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: poniter;
+}
+
+nav.navbar i:hover,
+nav.navbar img:hover {
+  cursor: pointer;
+  background-color: #48545f14;
+  transform: scale(1.05) translateZ(0px);
+}
+
+nav.navbar {
+  margin-left: 290px;
+}
+
+/* Menu */
+#menu {
+  width: 100% !important;
+  background-color: inherit;
+  overflow: hidden;
+}
+
+#menu .e-menu-item:not(.e-separator) {
+  height: 50px;
+  border-radius: 4px;
+}
+
+#menu .e-menu-item {
+  box-sizing: border-box;
+}
+
+#menu .e-menu-item a {
+  width: 100%;
+  color: rgb(171, 163, 152);
+  font-weight: 300;
+  padding: 7px 5px;
+  box-sizing: border-box;
+}
+
+#menu .e-anchor-wrap {
+  display: inline-block;
+}
+
+#menu .e-menu-item .e-anchor-wrap span.e-menu-icon {
+  color: rgb(171, 163, 152);
+}
+
+#menu .e-menu-item.e-separator {
+  border: none;
+  margin: 5px 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+  color: #65da41;
+}
+
+#menu .e-menu-item.e-separator:not(:first-child) {
+  margin-top: 35px;
+}
+
+/* Logo */
+.logo-wrapper {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  background-color: transparent; /* Or your sidebar background */
+}
+
+.app-logo {
+  width: 180px; /* Fixed width for logo container */
+  height: 50px; /* Fixed height for logo container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Profile Image */
+.profile-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgba(75, 84, 95, 0.12); /* Fixed RGBA syntax */
+  padding: 16px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  gap: 12px; /* Added gap for better spacing */
+}
+
+img.profile-pic {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover; /* Ensures image covers the circle properly */
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Optional: adds a border */
+}
+
+.profile-wrapper .titles {
+  line-height: 1.2; /* Better line spacing */
+}
+
+.profile-wrapper h6 {
+  font-weight: 600;
+  color: #1a202c;
+}
+
+.profile-wrapper .text-muted {
+  font-size: 0.875rem;
+  color: #718096 !important;
+}
 /* Hyperlink */
 .no-a-decoration,
 .no-a-decoration:hover {
@@ -48,6 +177,12 @@ body {
 
 .e-bigger {
   font-size: x-large;
+}
+
+.main-content {
+  margin-left: 290px;
+  overflow-y: auto;
+  height: 92vh;
 }
 
 /* Radio button group */
@@ -72,8 +207,110 @@ custom-rbt-group label.e-btn {
   border: 1px solid #fff;
 }
 
+/* Sidebar  */
+#sidebar {
+  background-color: #12161d;
+  border-right: 1px dashed rgba(75, 82, 85, 0, 24);
+  padding: 10px 20px;
+  overflow: hidden;
+}
+
+#sidebar .e-menu-wrapper {
+  width: 100%;
+  background-color: inherit;
+}
+
+#sidebar-toggler {
+  padding: 10px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+#sidebar-toggler:hover {
+  cursor: pointer;
+  background-color: #48545f14;
+  transform: scale(1.05) translateZ(0px);
+}
+
+#sidebar.e-close {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#sidebar.e-close .app-logo {
+  display: none;
+}
+
+#sidebar.e-close .e-anchor-wrap,
+#sidebar.e-close .e-menu-item.e-menu-caret-icon {
+  font-size: 0px;
+}
+
+#sidebar.e-close .profile-wrapper .titles {
+  display: none !important;
+}
+
+#sidebar.e-open .e-anchor-wrap,
+#sidebar.e-close .e-menu-icon,
+#sidebar.e-open .e-menu-icon {
+  visibility: visible;
+}
+
+#sidebar.e-open .profile-wrapper .titles,
+#sidebar.e-open .app-logo {
+  display: flex;
+}
+
+#sidebar.e-sidebar.e-right.e-close {
+  visibility: visible;
+  transform: translateX(0%);
+}
+
+#sidebar.e-open #sidebar-toggler:before {
+  content: "\f100";
+}
+
+#sidebar.e-close #sidebar-toggler:before {
+  content: "\f101";
+}
+
 /* widgets */
 .widget {
   border-radius: 1rem;
   background-color: #1a222b;
+}
+
+.widget.summary > div:first-child {
+  background-color: #222b33;
+  padding: 1rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.widget.summary > div:first-child i {
+  font-weight: bold;
+}
+
+.widget.income > div:first-child {
+  color: #65da41;
+}
+
+.widget.expense > div:first-child {
+  color: #ff4e48;
+}
+
+.widget.balance > div:first-child {
+  color: #2aa1ff;
+}
+
+.widget.chart {
+  padding: 5px;
+}
+
+/* BreadCrumb */
+.e-breadcrumb a,
+.e-breadcrumb a:hover {
+  text-decoration: none !important;
+  color: inherit !important;
 }
