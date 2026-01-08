@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace ExpensesTracker.Models;
 
@@ -8,7 +9,7 @@ namespace ExpensesTracker.Models;
 public class Category
 {
     public int CategoryId { get; set; }
-    [Required]
+    [Required(ErrorMessage = "Title is required")]
     [MaxLength(50)]
     public string Title { get; set; }
     [MaxLength(50)]
@@ -20,7 +21,4 @@ public class Category
         {
             return this.Icon + " " + Title;
         } }
-
-    public ICollection<Transaction>? Transactions { get; set; }
-
 }
