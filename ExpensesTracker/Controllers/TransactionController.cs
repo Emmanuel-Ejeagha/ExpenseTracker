@@ -13,6 +13,12 @@ namespace ExpensesTracker.Controllers
     public class TransactionController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly ILogger<TransactionController> _logger;
+
+        public TransactionController(ILogger<TransactionController> logger)
+        {
+            this._logger = logger;
+        }
 
         public TransactionController(AppDbContext context)
         {
@@ -43,17 +49,94 @@ namespace ExpensesTracker.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddOrEdit([Bind("TransactionId,Amount,Note,Date,CategoryId")] Transaction transaction)
         {
+            var category = await _context.Categories.FindAsync(transaction.CategoryId);
+            if (category == null)
+            {
+                ModelState.AddModelError("Category", "Selected category does not exist");
+            }
+
             if (ModelState.IsValid)
             {
-                if (transaction.TransactionId == 0)
-                    _context.Add(transaction);
-                else
-                    _context.Update(transaction);
+                try
+                {
+
+                    if (transaction.TransactionId == 0)
+                        _context.Add(transaction);
+                    else
+                        _context.Update(transaction);
+
                     await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+
+                    if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+                    {
+                        return Json(new { success = true, message = "Transaction saved successfully" });
+                    }
+
+                    return RedirectToAction(nameof(Index));
+                }
+                catch (DbUpdateException ex)
+                {
+                    ModelState.AddModelError("", "Unable to save transactions");
+                    _logger.LogError(ex, "Error saving transaction");
+                }
             }
+
             PopulateCategories();
             return View(transaction);
+        }
+
+        // Search and filter
+        public async Task<IActionResult> Search(string searchTerm,
+            int? categoryId,
+            DateTime? fromDate,
+            DateTime? toDate,
+            decimal? minAmount,
+            decimal? maxAmount)
+        {
+            var query = _context.Transactions
+                .Include(c => c.Category)
+                .AsQueryable();
+
+            if (!string.IsNullOrEmpty(searchTerm))
+                query = query.Where(t => t.Note.Contains(searchTerm));
+
+            if (categoryId.HasValue && categoryId > 0)
+                query = query.Where(t => t.CategoryId == categoryId);
+
+
+            var results = await query.ToListAsync();
+            return PartialView("_TransactionList", results);
+        }   
+        
+        public async Task<IActionResult> Filtered(TransactionFilterViewModel filter)
+        {
+            var query = _context.Transactions
+                .Include(t => t.Category)
+                .AsQueryable();
+
+            if (filter.CategoryId.HasValue && filter.CategoryId > 0)
+                query = query.Where(t => t.CategoryId == filter.CategoryId);
+
+            if (filter.StartDate.HasValue)
+                query = query.Where(t => t.Date >= filter.StartDate);
+
+            if (filter.EndDate.HasValue)
+                query = query.Where(c => c.Date == filter.EndDate);
+
+            // Sorting
+            query = filter.SortBy switch
+            {
+                "amount" => filter.SortDesc ? query.OrderByDescending(t => t.Amount) : query.OrderBy(t => t.Amount),
+                "date" => filter.SortDesc ? query.OrderByDescending(t => t.Date) : query.OrderBy(t => t.Date),
+                _ => query.OrderByDescending(t => t.Date)
+            };
+
+            var results = await query.ToListAsync();
+
+            if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+                return PartialView("_TransactionList", results);
+
+            return View("Index", results);
         }
       
         // GET: Transaction/Delete/5
