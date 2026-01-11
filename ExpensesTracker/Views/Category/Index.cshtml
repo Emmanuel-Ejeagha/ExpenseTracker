@@ -4,47 +4,416 @@
     ViewData["PageTitle"] = "Categories";
     ViewData["PageActionText"] = "+ New Category";
     ViewData["PageActionUrl"] = "/Category/AddOrEdit";
+    ViewData["CurrentPage"] = "Categories";
+    
+    var totalCategories = Model?.Count() ?? 0;
+    var incomeCategories = Model?.Count(c => c.Type == "Income") ?? 0;
+    var expenseCategories = Model?.Count(c => c.Type == "Expense") ?? 0;
 }
 
-<div class="row">
-    <div class="col-md-7">
-        <ejs-grid id="categories" dataSource="@Model" gridLines="None" allowSorting="true" allowPaging="true">
-            <e-grid-pagesettings pageSize="5"></e-grid-pagesettings>
-            <e-grid-columns>
-                <e-grid-column headerText="Category" field="TitleWithIcon" ></e-grid-column>
-                <e-grid-column headerText="Type" field="Type" template="#typeTemplate" width="150px"></e-grid-column>
-                <e-grid-column headerText="Actions" width="100px" template="#actionColumnTemplate"></e-grid-column>
-            </e-grid-columns>
-        </ejs-grid>
+<div class="row mb-4">
+    <div class="col-md-3">
+        <div class="widget summary small-card" onclick="filterByType('')" style="cursor: pointer;">
+            <div class="widget-body text-center p-3">
+                <div class="display-6 text-primary mb-2">@totalCategories</div>
+                <div class="text-muted">Total Categories</div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-5">
-        <div class="widget h-100 d-flex justify-content-center align-items-center" >
-            <i class="fa-solid fa-shapes fa-2xl"></i>
+    <div class="col-md-3">
+        <div class="widget summary small-card" onclick="filterByType('Income')" style="cursor: pointer;">
+            <div class="widget-body text-center p-3">
+                <div class="display-6 text-success mb-2">@incomeCategories</div>
+                <div class="text-muted">Income Categories</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="widget summary small-card" onclick="filterByType('Expense')" style="cursor: pointer;">
+            <div class="widget-body text-center p-3">
+                <div class="display-6 text-danger mb-2">@expenseCategories</div>
+                <div class="text-muted">Expense Categories</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="widget summary small-card">
+            <div class="widget-body text-center p-3">
+                <div class="display-6 text-warning mb-2">
+                    <i class="fas fa-chart-pie"></i>
+                </div>
+                <div class="text-muted">Manage</div>
+            </div>
         </div>
     </div>
 </div>
 
+<div class="row">
+    <div class="col-md-12">
+        <div class="widget shadow-sm">
+            <div class="widget-header bg-gradient-primary text-white p-3 rounded-top d-flex justify-content-between align-items-center">
+                <div>
+                    <h5 class="mb-0">
+                        <i class="fas fa-folder me-2"></i>Category Management
+                    </h5>
+                    <p class="mb-0 opacity-75 small">Manage your income and expense categories</p>
+                </div>
+                <div class="d-flex gap-2">
+                    <!-- Search -->
+                    <div class="input-group input-group-sm" style="width: 250px;">
+                        <span class="input-group-text bg-dark border-dark">
+                            <i class="fas fa-search"></i>
+                        </span>
+                        <input type="text" id="searchInput" class="form-control bg-dark text-white border-dark" 
+                               placeholder="Search categories..." aria-label="Search">
+                        <button class="btn btn-outline-light" type="button" id="clearSearch" style="display: none;">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Filter Dropdown -->
+                    <div class="dropdown">
+                        <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button" 
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-filter me-1"></i> Filter
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#" onclick="filterByType('')">All Categories</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#" onclick="filterByType('Income')">
+                                <i class="fas fa-arrow-up text-success me-2"></i>Income Only
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" onclick="filterByType('Expense')">
+                                <i class="fas fa-arrow-down text-danger me-2"></i>Expense Only
+                            </a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- New Category Button -->
+                    <a href="@ViewData["PageActionUrl"]" class="btn btn-sm btn-success">
+                        <i class="fas fa-plus me-1"></i> New Category
+                    </a>
+                </div>
+            </div>
+            
+            <div class="widget-body p-0">
+                <div class="table-responsive">
+                    <ejs-grid id="categoriesGrid" dataSource="@Model" allowSorting="true" allowPaging="true" 
+                              allowFiltering="true" toolbar="@(new List<string>() {"Search"})" 
+                              enablePersistence="true" persistSelection="true"
+                              rowSelected="rowSelected" rowDeselected="rowDeselected">
+                        <e-grid-pagesettings pageSize="10" pageSizes="true"></e-grid-pagesettings>
+                        <e-grid-filtersettings type="Menu"></e-grid-filtersettings>
+                        <e-grid-selectionsettings type="Multiple"></e-grid-selectionsettings>
+                        <e-grid-editSettings allowDeleting="true"></e-grid-editSettings>
+                        <e-grid-columns>
+                            <e-grid-column type="checkbox" width="50"></e-grid-column>
+                            <e-grid-column headerText="Category" field="TitleWithIcon" width="250" 
+                                         template="#categoryTemplate" allowSorting="true" allowFiltering="true"></e-grid-column>
+                            <e-grid-column headerText="Type" field="Type" width="120" 
+                                         template="#typeTemplate" allowSorting="true" allowFiltering="true"></e-grid-column>
+                            <e-grid-column headerText="Icon" field="Icon" width="100" 
+                                         template="#iconTemplate" allowFiltering="true"></e-grid-column>
+                            <e-grid-column headerText="ID" field="CategoryId" width="80" allowSorting="true"></e-grid-column>
+                            <e-grid-column headerText="Actions" width="150" template="#actionColumnTemplate" allowFiltering="false"></e-grid-column>
+                        </e-grid-columns>
+                    </ejs-grid>
+                </div>
+                
+                <!-- Bulk Actions -->
+                <div id="bulkActions" class="p-3 border-top bg-light" style="display: none;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <span id="selectedCount" class="badge bg-primary me-2">0</span>
+                            <span class="text-muted">categories selected</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button type="button" class="btn btn-sm btn-outline-danger" onclick="deleteSelected()">
+                                <i class="fas fa-trash me-1"></i> Delete Selected
+                            </button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="clearSelection()">
+                                <i class="fas fa-times me-1"></i> Clear Selection
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Templates -->
+<script id="categoryTemplate" type="text/x-template">
+    <div class="d-flex align-items-center">
+        <div class="icon-container me-3">
+            <div class="category-icon ${Icon ? '' : 'no-icon'}">
+                <i class="${Icon ? 'fas ' + Icon : 'fas fa-tag'}"></i>
+            </div>
+        </div>
+        <div class="flex-grow-1">
+            <div class="fw-semibold">${Title}</div>
+            <div class="text-muted small">${CategoryId}</div>
+        </div>
+    </div>
+</script>
+
 <script id="typeTemplate" type="text/x-template">
-    <div>
-        ${if(Type == "Expense")}
-            <span class="badge bg-danger">${Type}</span>
-        ${else}
-            <span class="badge bg-success">${Type}</span>
-        ${/if}
+    <div class="d-flex align-items-center">
+        <span class="badge ${Type === 'Income' ? 'bg-success' : 'bg-danger'} px-3 py-2">
+            <i class="fas ${Type === 'Income' ? 'fa-arrow-up' : 'fa-arrow-down'} me-1"></i>
+            ${Type}
+        </span>
+    </div>
+</script>
+
+<script id="iconTemplate" type="text/x-template">
+    <div class="text-center">
+        <i class="${Icon ? 'fas ' + Icon + ' fa-lg' : 'fas fa-tag fa-lg text-muted'}"></i>
     </div>
 </script>
 
 <script id="actionColumnTemplate" type="text/x-template">
-    <div class="d-flex flex-row justify-content-start">
-      <a class="btn btn-sm no-a-decoration" href="/Category/AddOrEdit/${CategoryId}">
-        <i class="fa-solid fa-pen fa-lg"></i>
-      </a>
-      <form action="/Category/Delete/${CategoryId}" method="post">
-      @Html.AntiForgeryToken()
-        <button type="submit" class="btn btn-sm btn-link no-a-decoration"
-            onClick="return confirm(&quot;Are you sure to delete this record?&quot;)">
-            <i class="fa-solid fa-trash-can fa-lg text-danger"></i>
+    <div class="d-flex gap-2">
+        <a class="btn btn-sm btn-outline-primary" href="/Category/AddOrEdit/${CategoryId}" 
+           title="Edit" data-bs-toggle="tooltip">
+            <i class="fas fa-edit"></i>
+        </a>
+        <a class="btn btn-sm btn-outline-info" href="/Category/Details/${CategoryId}" 
+           title="View Details" data-bs-toggle="tooltip">
+            <i class="fas fa-eye"></i>
+        </a>
+        <button type="button" class="btn btn-sm btn-outline-danger" 
+                onclick="deleteCategory(${CategoryId})" title="Delete" data-bs-toggle="tooltip">
+            <i class="fas fa-trash"></i>
         </button>
-      </form>
     </div>
 </script>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize tooltips
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+            
+            // Grid instance
+            let grid;
+            document.addEventListener('DOMContentLoaded', function() {
+                grid = document.getElementById('categoriesGrid').ej2_instances[0];
+            });
+            
+            // Search functionality
+            const searchInput = document.getElementById('searchInput');
+            const clearSearch = document.getElementById('clearSearch');
+            
+            searchInput.addEventListener('input', function() {
+                if (this.value.trim()) {
+                    clearSearch.style.display = 'block';
+                    if (grid) {
+                        grid.search(this.value);
+                    }
+                } else {
+                    clearSearch.style.display = 'none';
+                    if (grid) {
+                        grid.search('');
+                    }
+                }
+            });
+            
+            clearSearch.addEventListener('click', function() {
+                searchInput.value = '';
+                this.style.display = 'none';
+                if (grid) {
+                    grid.search('');
+                }
+            });
+        });
+        
+        // Filter by type
+        function filterByType(type) {
+            const grid = document.getElementById('categoriesGrid').ej2_instances[0];
+            if (type) {
+                grid.filterByColumn('Type', 'equal', type);
+            } else {
+                grid.removeFilteredColsByField('Type');
+            }
+            
+            // Update active filter button
+            document.querySelectorAll('.dropdown-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Show toast notification
+            showToast(type ? `Showing ${type} categories` : 'Showing all categories', 'info');
+        }
+        
+        // Row selection handlers
+        function rowSelected(args) {
+            updateBulkActions();
+        }
+        
+        function rowDeselected(args) {
+            updateBulkActions();
+        }
+        
+        function updateBulkActions() {
+            const grid = document.getElementById('categoriesGrid').ej2_instances[0];
+            const selectedRows = grid.getSelectedRecords();
+            const bulkActions = document.getElementById('bulkActions');
+            const selectedCount = document.getElementById('selectedCount');
+            
+            if (selectedRows.length > 0) {
+                bulkActions.style.display = 'block';
+                selectedCount.textContent = selectedRows.length;
+            } else {
+                bulkActions.style.display = 'none';
+            }
+        }
+        
+        function clearSelection() {
+            const grid = document.getElementById('categoriesGrid').ej2_instances[0];
+            grid.clearSelection();
+            updateBulkActions();
+        }
+        
+        // Delete category
+        function deleteCategory(id) {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "This will permanently delete the category!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'Yes, delete it!',
+                cancelButtonText: 'Cancel'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Send delete request
+                    fetch(`/Category/Delete/${id}`, {
+                        method: 'POST',
+                        headers: {
+                            'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value,
+                            'Content-Type': 'application/x-www-form-urlencoded'
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            showToast('Category deleted successfully!', 'success');
+                            // Reload the grid
+                            location.reload();
+                        } else {
+                            showToast(data.message || 'Error deleting category', 'error');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        showToast('An error occurred', 'error');
+                    });
+                }
+            });
+        }
+        
+        // Delete selected categories
+        function deleteSelected() {
+            const grid = document.getElementById('categoriesGrid').ej2_instances[0];
+            const selectedRows = grid.getSelectedRecords();
+            
+            if (selectedRows.length === 0) {
+                showToast('No categories selected', 'warning');
+                return;
+            }
+            
+            const categoryIds = selectedRows.map(row => row.CategoryId);
+            
+            Swal.fire({
+                title: `Delete ${selectedRows.length} categories?`,
+                text: "This action cannot be undone!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'Yes, delete them!',
+                cancelButtonText: 'Cancel'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Send bulk delete request
+                    fetch('/Category/BulkDelete', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
+                        },
+                        body: JSON.stringify(categoryIds)
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            showToast(data.message, 'success');
+                            // Reload the grid
+                            location.reload();
+                        } else {
+                            showToast(data.message || 'Error deleting categories', 'error');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        showToast('An error occurred', 'error');
+                    });
+                }
+            });
+        }
+        
+        // Toast notification function
+        function showToast(message, type = 'info') {
+            const toastContainer = document.getElementById('toastContainer') || createToastContainer();
+            const toastId = 'toast-' + Date.now();
+            
+            const toastHtml = `
+                <div id="${toastId}" class="toast align-items-center text-white bg-${type} border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="d-flex">
+                        <div class="toast-body">
+                            <i class="fas ${getToastIcon(type)} me-2"></i>
+                            ${message}
+                        </div>
+                        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                </div>
+            `;
+            
+            toastContainer.innerHTML += toastHtml;
+            const toastElement = document.getElementById(toastId);
+            const toast = new bootstrap.Toast(toastElement, {
+                autohide: true,
+                delay: 3000
+            });
+            toast.show();
+            
+            toastElement.addEventListener('hidden.bs.toast', function () {
+                this.remove();
+            });
+        }
+        
+        function getToastIcon(type) {
+            switch(type) {
+                case 'success': return 'fa-check-circle';
+                case 'error': return 'fa-exclamation-circle';
+                case 'warning': return 'fa-exclamation-triangle';
+                case 'info': return 'fa-info-circle';
+                default: return 'fa-bell';
+            }
+        }
+        
+        function createToastContainer() {
+            const container = document.createElement('div');
+            container.id = 'toastContainer';
+            container.className = 'toast-container position-fixed top-0 end-0 p-3';
+            container.style.zIndex = '1060';
+            document.body.appendChild(container);
+            return container;
+        }
+    </script>
+}
