@@ -1,84 +1,342 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="@(ViewData["DarkMode"]?.ToString() == "true" ? "dark-mode" : "")">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Expenses Tracker</title>
+    <title>@(ViewData["PageTitle"] ?? "Expenses Tracker") - Smart Finance Manager</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Smart Expenses Tracker - Manage your personal and business finances efficiently">
+    <meta name="keywords" content="expenses tracker, finance manager, budget, money management, personal finance">
+    <meta name="author" content="Expenses Tracker">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="~/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/apple-touch-icon.png">
+    
+    <!-- Core CSS -->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-     <!-- Syncfusion ASP.NET Core controls styles -->
-    @* <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/32.1.19/material.css" /> *@
-    <link href="https://cdn.syncfusion.com/ej2/32.1.19/bootstrap5-dark.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Syncfusion CSS -->
+    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/32.1.19/material.css" id="syncfusion-theme" />
+    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/32.1.19/bootstrap5-dark.css" id="syncfusion-dark-theme" disabled />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Application CSS -->
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    @* <link rel="stylesheet" href="~/css/sidebar-overlay.css" asp-append-version="true" /> *@
     
-    <link rel="stylesheet" href="~/ExpensesTracker.styles.css" asp-append-version="true" />
-    <!-- Syncfusion ASP.NET Core controls scripts -->
-    <script src="https://cdn.syncfusion.com/ej2/32.1.19/dist/ej2.min.js"></script>
-    
+    <style>
+        :root {
+            --sidebar-width: 260px;
+            --sidebar-collapsed-width: 70px;
+            --header-height: 64px;
+            --transition-speed: 0.3s;
+        }
+        
+        .dark-mode {
+            --primary-color: #4361ee;
+            --secondary-color: #3a0ca3;
+            --background-color: #12161d;
+            --surface-color: #1a222b;
+            --text-color: #f8f9fa;
+            --text-muted: #adb5bd;
+        }
+        
+        /* Prevent body scrolling when sidebar is open on mobile */
+        body.sidebar-open {
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body class="e-bigger">
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 9999; justify-content: center; align-items: center;">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
 
+    <!-- Sidebar -->
     <partial name="_SideBar" />
     
-    <div class="dock-target">
-        <nav class="navbar sticky-top">
-            <div class="container-fluid py-2 px-4">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <div>
-                    <i class="fa-solid fa-bell"></i>
-                    <i class="fa-solid fa-message"></i>
-                    <img class="profile-pic" src="~/profilePic.jpg" />
+    <!-- Main Content Area -->
+    <div class="main-container">
+        <!-- Top Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary shadow-sm">
+            <div class="container-fluid px-4">
+                <!-- Mobile Menu Toggle -->
+                <button class="btn btn-outline-light d-lg-none me-2" type="button" id="mobileMenuToggle" aria-label="Toggle sidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <!-- Page Title (for mobile) -->
+                <div class="d-lg-none navbar-brand text-white">
+                    Expenses Tracker
+                </div>
+                
+                <!-- Search Bar -->
+                <form class="d-none d-lg-flex flex-grow-1 mx-4" id="globalSearchForm">
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-text bg-dark border-dark">
+                            <i class="fas fa-search"></i>
+                        </span>
+                        <input type="search" class="form-control bg-dark text-white border-dark" 
+                               placeholder="Search transactions, categories..." aria-label="Search" 
+                               id="globalSearchInput">
+                        <button class="btn btn-outline-light" type="button" id="clearGlobalSearch" style="display: none;" aria-label="Clear search">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </form>
+                
+                <!-- Right Side Actions -->
+                <div class="d-flex align-items-center gap-3">
+                    <!-- Theme Toggle -->
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="themeToggle" aria-label="Toggle dark mode">
+                        <label class="form-check-label text-white" for="themeToggle">
+                            <i class="fas fa-moon"></i>
+                        </label>
+                    </div>
+                    
+                    <!-- Notifications -->
+                    <div class="dropdown">
+                        <button class="btn btn-link text-white p-1 position-relative" type="button" 
+                                data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications">
+                            <i class="fas fa-bell fa-lg"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                3
+                            </span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end p-0" style="min-width: 320px;">
+                            <div class="dropdown-header bg-primary text-white">
+                                <h6 class="mb-0">Notifications</h6>
+                                <small>You have 3 new alerts</small>
+                            </div>
+                            <div class="list-group list-group-flush" style="max-height: 300px; overflow-y: auto;">
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <small class="text-success">Income</small>
+                                        <small>5 min ago</small>
+                                    </div>
+                                    <p class="mb-1">Salary received: ₦150,000</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- User Profile -->
+                    <div class="dropdown">
+                        <button class="btn btn-link text-white p-0 d-flex align-items-center gap-2 text-decoration-none" 
+                                type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="User menu">
+                            <img class="profile-pic rounded-circle" src="~/profilePic.jpg" 
+                                 alt="Profile" width="40" height="40">
+                            <div class="d-none d-md-block text-start">
+                                <div class="small fw-semibold">Emmanuel Ejeagha</div>
+                                <div class="x-small opacity-75">Premium User</div>
+                            </div>
+                            <i class="fas fa-chevron-down small"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end shadow">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>My Profile</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
 
-        <div class="main-content">
-            <div class="container mt-5">
-                <div class="row justify-content-center">
-                    <div class="@(ViewData["isDashboard"] == null) ? col-md-10 : col-md-12">
-                        <main role="main" class="pb-3">
-                            @if (ViewData["isDashboard"] == null)
-                            {
-                                <div class="row">
-                                    <div class="col-md-7">
-                                        <div class="d-flex flex-column mb-5">
-                                            <div class="d-flex mb-1">
-                                                <div class="flex-grow-1">
-                                                    <h3 class="fw-bold">@ViewData["PageTitle"]</h3>
-                                                </div>
-                                                <div class="">
-                                                    @if (ViewData["PageActionText"] != null)
-                                                    {
-                                                        <a class="btn btn-success text-white" href="@ViewData["PageActionUrl"]">
-                                                            @ViewData["PageActionText"]
-                                                        </a>
-                                                    }
-                                                </div>
-                                            </div>
-                                            <ejs-breadcrumb id="breadcrumb" separatorTemplate="@Html.Raw("<span class='fa-solid fa-angle-right'></span>")"></ejs-breadcrumb>
-                                        </div>
+        <!-- Main Content -->
+        <main class="main-content" id="mainContent">
+            <div class="container-fluid py-4 px-4">
+                <!-- Breadcrumb & Page Header -->
+                @if (ViewData["isDashboard"] == null)
+                {
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <div class="page-header d-flex flex-column mb-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div>
+                                        <h1 class="h2 fw-bold mb-1">@ViewData["PageTitle"]</h1>
+                                        @if (ViewData["PageDescription"] != null)
+                                        {
+                                            <p class="text-muted mb-0">@ViewData["PageDescription"]</p>
+                                        }
                                     </div>
+                                    @if (ViewData["PageActionText"] != null)
+                                    {
+                                        <a href="@ViewData["PageActionUrl"]" class="btn btn-primary btn-lg shadow-sm">
+                                            <i class="fas @(ViewData["PageActionIcon"] ?? "fa-plus") me-2"></i>
+                                            @ViewData["PageActionText"]
+                                        </a>
+                                    }
                                 </div>
-                            }
-                            @RenderBody()
-                        </main>
+                                
+                                <!-- Breadcrumb -->
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item">
+                                            <a href="/" class="text-decoration-none">
+                                                <i class="fas fa-home me-1"></i>Dashboard
+                                            </a>
+                                        </li>
+                                        @if (ViewData["CurrentPage"] != null)
+                                        {
+                                            <li class="breadcrumb-item active" aria-current="page">
+                                                @ViewData["CurrentPage"]
+                                            </li>
+                                        }
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                }
+                
+                <!-- Flash Messages -->
+                @if (TempData["SuccessMessage"] != null)
+                {
+                    <div class="alert alert-success alert-dismissible fade show shadow-sm" role="alert">
+                        <i class="fas fa-check-circle me-2"></i>
+                        @TempData["SuccessMessage"]
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                }
+                
+                @if (TempData["ErrorMessage"] != null)
+                {
+                    <div class="alert alert-danger alert-dismissible fade show shadow-sm" role="alert">
+                        <i class="fas fa-exclamation-circle me-2"></i>
+                        @TempData["ErrorMessage"]
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                }
+
+                <!-- Page Content -->
+                @RenderBody()
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer mt-auto py-3 border-top">
+            <div class="container-fluid px-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <span class="text-muted">
+                            &copy; @DateTime.Now.Year Expenses Tracker v2.0
+                        </span>
                     </div>
                 </div>
             </div>
-        </div>
+        </footer>
     </div>
 
-    @* <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2026 - ExpensesTracker - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer> *@
+    <!-- Scripts -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
-        <ejs-scripts></ejs-scripts>
+    
+    <!-- Syncfusion Script Registration -->
+    <ejs-scripts></ejs-scripts>
 
+    @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize tooltips
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+            
+            // Mobile menu toggle
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    const sidebar = document.getElementById('sidebar');
+                    if (sidebar && sidebar.ej2_instances && sidebar.ej2_instances[0]) {
+                        sidebar.ej2_instances[0].toggle();
+                        // Toggle body class for mobile
+                        document.body.classList.toggle('sidebar-open');
+                    }
+                });
+            }
+            
+            // Theme toggle
+            const themeToggle = document.getElementById('themeToggle');
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            
+            if (currentTheme === 'dark') {
+                themeToggle.checked = true;
+                enableDarkMode();
+            }
+            
+            themeToggle.addEventListener('change', function() {
+                if (this.checked) {
+                    enableDarkMode();
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    disableDarkMode();
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+            
+            // Global search
+            const globalSearchInput = document.getElementById('globalSearchInput');
+            const clearGlobalSearch = document.getElementById('clearGlobalSearch');
+            
+            if (globalSearchInput && clearGlobalSearch) {
+                globalSearchInput.addEventListener('input', function() {
+                    if (this.value.trim()) {
+                        clearGlobalSearch.style.display = 'block';
+                    } else {
+                        clearGlobalSearch.style.display = 'none';
+                    }
+                });
+                
+                clearGlobalSearch.addEventListener('click', function() {
+                    globalSearchInput.value = '';
+                    this.style.display = 'none';
+                });
+            }
+            
+            // Auto-hide alerts after 5 seconds
+            setTimeout(function() {
+                var alerts = document.querySelectorAll('.alert:not(.alert-permanent)');
+                alerts.forEach(function(alert) {
+                    var bsAlert = new bootstrap.Alert(alert);
+                    bsAlert.close();
+                });
+            }, 5000);
+        });
+        
+        function enableDarkMode() {
+            document.documentElement.classList.add('dark-mode');
+            document.getElementById('syncfusion-theme').disabled = true;
+            document.getElementById('syncfusion-dark-theme').disabled = false;
+            document.body.style.backgroundColor = '#12161d';
+            document.body.style.color = '#f8f9fa';
+        }
+        
+        function disableDarkMode() {
+            document.documentElement.classList.remove('dark-mode');
+            document.getElementById('syncfusion-theme').disabled = false;
+            document.getElementById('syncfusion-dark-theme').disabled = true;
+            document.body.style.backgroundColor = '';
+            document.body.style.color = '';
+        }
+    </script>
 </body>
 </html>
