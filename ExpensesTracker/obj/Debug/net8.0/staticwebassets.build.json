@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UWPvbXaGVnD8KpYTgVRsrjex5t4hrMU7q9jFBVW0e2c=",
+  "Hash": "hXzJMKkGkM/CHOmFU1f3yetKRs5DIA5F9tSonw6ybEs=",
   "Source": "ExpensesTracker",
   "BasePath": "_content/ExpensesTracker",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ExpensesTracker/wwwroot",
       "Source": "ExpensesTracker",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/obj/Debug/net8.0/scopedcss/bundle/ExpensesTracker.styles.css",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/obj/Debug/net8.0/scopedcss/bundle/ExpensesTracker.styles.css",
       "SourceId": "ExpensesTracker",
       "SourceType": "Computed",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/obj/Debug/net8.0/scopedcss/bundle/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/obj/Debug/net8.0/scopedcss/bundle/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "ExpensesTracker#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
@@ -35,13 +35,13 @@
       "Integrity": "dqkq7+YovgdwPMk8UwGJUmfLJIEfocLne1IekEJjC3s=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/obj/Debug/net8.0/scopedcss/bundle/ExpensesTracker.styles.css"
+      "OriginalItemSpec": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/obj/Debug/net8.0/scopedcss/bundle/ExpensesTracker.styles.css"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/obj/Debug/net8.0/scopedcss/projectbundle/ExpensesTracker.bundle.scp.css",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/obj/Debug/net8.0/scopedcss/projectbundle/ExpensesTracker.bundle.scp.css",
       "SourceId": "ExpensesTracker",
       "SourceType": "Computed",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/obj/Debug/net8.0/scopedcss/projectbundle/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/obj/Debug/net8.0/scopedcss/projectbundle/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "ExpensesTracker#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
@@ -56,13 +56,13 @@
       "Integrity": "dqkq7+YovgdwPMk8UwGJUmfLJIEfocLne1IekEJjC3s=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/obj/Debug/net8.0/scopedcss/projectbundle/ExpensesTracker.bundle.scp.css"
+      "OriginalItemSpec": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/obj/Debug/net8.0/scopedcss/projectbundle/ExpensesTracker.bundle.scp.css"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/android-chrome-192x192.png",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/android-chrome-192x192.png",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "android-chrome-192x192#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -80,10 +80,10 @@
       "OriginalItemSpec": "wwwroot/android-chrome-192x192.png"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/android-chrome-512x512.png",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/android-chrome-512x512.png",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "android-chrome-512x512#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -101,10 +101,10 @@
       "OriginalItemSpec": "wwwroot/android-chrome-512x512.png"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/apple-touch-icon.png",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/apple-touch-icon.png",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "apple-touch-icon#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -122,10 +122,31 @@
       "OriginalItemSpec": "wwwroot/apple-touch-icon.png"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/css/site.css",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/css/sidebar-overlay.css",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
+      "BasePath": "_content/ExpensesTracker",
+      "RelativePath": "css/sidebar-overlay#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5g66atwapm",
+      "Integrity": "JcQKJ7lc0393E6pNEQFpMaBuV5BQFv2LcqrgCTjODfw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/sidebar-overlay.css"
+    },
+    {
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/css/site.css",
+      "SourceId": "ExpensesTracker",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "css/site#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -136,17 +157,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "dyf04ambri",
-      "Integrity": "O6PzVREwBTCFDvFnpHRSH0GAh0yduNo2fdsgMRU5mF4=",
+      "Fingerprint": "tn9e2qsoni",
+      "Integrity": "adLckWN7MjotvCF509RYgKMzg2Zwn4cUsuR4CCxVpqc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/site.css"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/favicon-16x16.png",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/favicon-16x16.png",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "favicon-16x16#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -164,10 +185,10 @@
       "OriginalItemSpec": "wwwroot/favicon-16x16.png"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/favicon-32x32.png",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/favicon-32x32.png",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "favicon-32x32#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -185,10 +206,10 @@
       "OriginalItemSpec": "wwwroot/favicon-32x32.png"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/favicon.ico",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/favicon.ico",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "favicon#[.{fingerprint}]?.ico",
       "AssetKind": "All",
@@ -206,10 +227,10 @@
       "OriginalItemSpec": "wwwroot/favicon.ico"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/js/site.js",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/js/site.js",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "js/site#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -227,10 +248,10 @@
       "OriginalItemSpec": "wwwroot/js/site.js"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -248,10 +269,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -269,10 +290,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -290,10 +311,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -311,10 +332,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -332,10 +353,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -353,10 +374,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -374,10 +395,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -395,10 +416,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -416,10 +437,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -437,10 +458,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -458,10 +479,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -479,10 +500,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -500,10 +521,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -521,10 +542,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -542,10 +563,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -563,10 +584,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -584,10 +605,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -605,10 +626,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -626,10 +647,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -647,10 +668,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -668,10 +689,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -689,10 +710,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -710,10 +731,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -731,10 +752,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -752,10 +773,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.css"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -773,10 +794,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.css.map"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -794,10 +815,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.min.css"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -815,10 +836,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -836,10 +857,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -857,10 +878,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -878,10 +899,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -899,10 +920,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -920,10 +941,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -941,10 +962,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -962,10 +983,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -983,10 +1004,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1004,10 +1025,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1025,10 +1046,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1046,10 +1067,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1067,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1088,10 +1109,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.js"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1109,10 +1130,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.js.map"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1130,10 +1151,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.min.js"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1151,10 +1172,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/LICENSE",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/LICENSE",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/bootstrap/LICENSE#[.{fingerprint}]?",
       "AssetKind": "All",
@@ -1172,10 +1193,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/LICENSE"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1193,10 +1214,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1214,10 +1235,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE#[.{fingerprint}]?.txt",
       "AssetKind": "All",
@@ -1235,10 +1256,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery-validation/dist/additional-methods.js",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/jquery-validation/dist/additional-methods#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1256,10 +1277,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/additional-methods.js"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1277,10 +1298,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/additional-methods.min.js"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1298,10 +1319,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/jquery.validate.js"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1319,10 +1340,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/jquery.validate.min.js"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery-validation/LICENSE.md",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery-validation/LICENSE.md",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/jquery-validation/LICENSE#[.{fingerprint}]?.md",
       "AssetKind": "All",
@@ -1340,10 +1361,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/LICENSE.md"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery/dist/jquery.js",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery/dist/jquery.js",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/jquery/dist/jquery#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1361,10 +1382,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/dist/jquery.js"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery/dist/jquery.min.js",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery/dist/jquery.min.js",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/jquery/dist/jquery.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1382,10 +1403,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/dist/jquery.min.js"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery/dist/jquery.min.map",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery/dist/jquery.min.map",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/jquery/dist/jquery.min#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1403,10 +1424,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/dist/jquery.min.map"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery/LICENSE.txt",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery/LICENSE.txt",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "lib/jquery/LICENSE#[.{fingerprint}]?.txt",
       "AssetKind": "All",
@@ -1424,10 +1445,31 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/LICENSE.txt"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/profilePic.jpg",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/logo.png",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
+      "BasePath": "_content/ExpensesTracker",
+      "RelativePath": "logo#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nc2ytelt3f",
+      "Integrity": "mfoy7xkVfu6IcUCmrxp5wGPH7z/7qfqCxxI0jYFNiIk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/logo.png"
+    },
+    {
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/profilePic.jpg",
+      "SourceId": "ExpensesTracker",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "profilePic#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -1445,10 +1487,10 @@
       "OriginalItemSpec": "wwwroot/profilePic.jpg"
     },
     {
-      "Identity": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/site.webmanifest",
+      "Identity": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/site.webmanifest",
       "SourceId": "ExpensesTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/",
+      "ContentRoot": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/",
       "BasePath": "_content/ExpensesTracker",
       "RelativePath": "site#[.{fingerprint}]?.webmanifest",
       "AssetKind": "All",
@@ -1469,7 +1511,7 @@
   "Endpoints": [
     {
       "Route": "android-chrome-192x192.png",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/android-chrome-192x192.png",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/android-chrome-192x192.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1490,7 +1532,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 Jan 2026 17:05:25 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1506,7 +1548,7 @@
     },
     {
       "Route": "android-chrome-192x192.w7br2fhnx2.png",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/android-chrome-192x192.png",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/android-chrome-192x192.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1527,7 +1569,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 Jan 2026 17:05:25 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1551,7 +1593,7 @@
     },
     {
       "Route": "android-chrome-512x512.png",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/android-chrome-512x512.png",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/android-chrome-512x512.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1572,7 +1614,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 Jan 2026 17:05:26 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1588,7 +1630,7 @@
     },
     {
       "Route": "android-chrome-512x512.znkbc9jz2u.png",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/android-chrome-512x512.png",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/android-chrome-512x512.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1609,7 +1651,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 Jan 2026 17:05:26 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1633,7 +1675,7 @@
     },
     {
       "Route": "apple-touch-icon.ez6jy3fea7.png",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/apple-touch-icon.png",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/apple-touch-icon.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1654,7 +1696,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 Jan 2026 17:05:26 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1678,7 +1720,7 @@
     },
     {
       "Route": "apple-touch-icon.png",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/apple-touch-icon.png",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/apple-touch-icon.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1699,7 +1741,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 Jan 2026 17:05:26 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1714,8 +1756,8 @@
       ]
     },
     {
-      "Route": "css/site.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/css/site.css",
+      "Route": "css/sidebar-overlay.5g66atwapm.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/css/sidebar-overlay.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1724,7 +1766,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2382"
+          "Value": "751"
         },
         {
           "Name": "Content-Type",
@@ -1732,48 +1774,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"O6PzVREwBTCFDvFnpHRSH0GAh0yduNo2fdsgMRU5mF4=\""
+          "Value": "\"JcQKJ7lc0393E6pNEQFpMaBuV5BQFv2LcqrgCTjODfw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 07 Jan 2026 19:59:04 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-O6PzVREwBTCFDvFnpHRSH0GAh0yduNo2fdsgMRU5mF4="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.dyf04ambri.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/css/site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2382"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"O6PzVREwBTCFDvFnpHRSH0GAh0yduNo2fdsgMRU5mF4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 07 Jan 2026 19:59:04 GMT"
+          "Value": "Sun, 11 Jan 2026 08:21:09 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1783,7 +1788,126 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "dyf04ambri"
+          "Value": "5g66atwapm"
+        },
+        {
+          "Name": "label",
+          "Value": "css/sidebar-overlay.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JcQKJ7lc0393E6pNEQFpMaBuV5BQFv2LcqrgCTjODfw="
+        }
+      ]
+    },
+    {
+      "Route": "css/sidebar-overlay.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/css/sidebar-overlay.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "751"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JcQKJ7lc0393E6pNEQFpMaBuV5BQFv2LcqrgCTjODfw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 11 Jan 2026 08:21:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JcQKJ7lc0393E6pNEQFpMaBuV5BQFv2LcqrgCTjODfw="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/css/site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17377"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"adLckWN7MjotvCF509RYgKMzg2Zwn4cUsuR4CCxVpqc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 11 Jan 2026 10:15:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-adLckWN7MjotvCF509RYgKMzg2Zwn4cUsuR4CCxVpqc="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.tn9e2qsoni.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/css/site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17377"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"adLckWN7MjotvCF509RYgKMzg2Zwn4cUsuR4CCxVpqc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 11 Jan 2026 10:15:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tn9e2qsoni"
         },
         {
           "Name": "label",
@@ -1791,13 +1915,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-O6PzVREwBTCFDvFnpHRSH0GAh0yduNo2fdsgMRU5mF4="
+          "Value": "sha256-adLckWN7MjotvCF509RYgKMzg2Zwn4cUsuR4CCxVpqc="
         }
       ]
     },
     {
       "Route": "ExpensesTracker.a7ztepges8.bundle.scp.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/obj/Debug/net8.0/scopedcss/projectbundle/ExpensesTracker.bundle.scp.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/obj/Debug/net8.0/scopedcss/projectbundle/ExpensesTracker.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1818,7 +1942,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 Jan 2026 15:04:35 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1842,7 +1966,7 @@
     },
     {
       "Route": "ExpensesTracker.a7ztepges8.styles.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/obj/Debug/net8.0/scopedcss/bundle/ExpensesTracker.styles.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/obj/Debug/net8.0/scopedcss/bundle/ExpensesTracker.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1863,7 +1987,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 Jan 2026 15:04:35 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1887,7 +2011,7 @@
     },
     {
       "Route": "ExpensesTracker.bundle.scp.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/obj/Debug/net8.0/scopedcss/projectbundle/ExpensesTracker.bundle.scp.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/obj/Debug/net8.0/scopedcss/projectbundle/ExpensesTracker.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1908,7 +2032,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 Jan 2026 15:04:35 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1924,7 +2048,7 @@
     },
     {
       "Route": "ExpensesTracker.styles.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/obj/Debug/net8.0/scopedcss/bundle/ExpensesTracker.styles.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/obj/Debug/net8.0/scopedcss/bundle/ExpensesTracker.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1945,7 +2069,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 Jan 2026 15:04:35 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1961,7 +2085,7 @@
     },
     {
       "Route": "favicon-16x16.32tj8hrk1r.png",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/favicon-16x16.png",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/favicon-16x16.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1982,7 +2106,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 Jan 2026 17:05:26 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2006,7 +2130,7 @@
     },
     {
       "Route": "favicon-16x16.png",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/favicon-16x16.png",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/favicon-16x16.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2027,7 +2151,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 Jan 2026 17:05:26 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2043,7 +2167,7 @@
     },
     {
       "Route": "favicon-32x32.lf2q0ha4h7.png",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/favicon-32x32.png",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/favicon-32x32.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2064,7 +2188,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 Jan 2026 17:05:26 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2088,7 +2212,7 @@
     },
     {
       "Route": "favicon-32x32.png",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/favicon-32x32.png",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/favicon-32x32.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2109,7 +2233,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 Jan 2026 17:05:26 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2125,7 +2249,7 @@
     },
     {
       "Route": "favicon.7b0pl8ugly.ico",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/favicon.ico",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/favicon.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2146,7 +2270,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 Jan 2026 17:05:26 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2170,7 +2294,7 @@
     },
     {
       "Route": "favicon.ico",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/favicon.ico",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/favicon.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2191,7 +2315,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 Jan 2026 17:05:26 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2207,7 +2331,7 @@
     },
     {
       "Route": "js/site.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/js/site.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/js/site.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2228,7 +2352,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2244,7 +2368,7 @@
     },
     {
       "Route": "js/site.xtxxf3hu2r.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/js/site.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/js/site.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2265,7 +2389,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2289,7 +2413,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.agp80tu62r.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2310,7 +2434,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2334,7 +2458,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2355,7 +2479,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2371,7 +2495,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2392,7 +2516,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2408,7 +2532,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.css.st1cbwfwo5.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2429,7 +2553,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2453,7 +2577,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2474,7 +2598,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2490,7 +2614,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.css.5vj65cig9w.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2511,7 +2635,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2535,7 +2659,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2556,7 +2680,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2572,7 +2696,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.unj9p35syc.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2593,7 +2717,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2617,7 +2741,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2638,7 +2762,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2654,7 +2778,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.2q4vfeazbq.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2675,7 +2799,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2699,7 +2823,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2720,7 +2844,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2736,7 +2860,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2757,7 +2881,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2773,7 +2897,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2794,7 +2918,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2810,7 +2934,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.o371a8zbv2.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2831,7 +2955,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2855,7 +2979,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.n1oizzvkh6.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2876,7 +3000,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2900,7 +3024,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.q2ku51ktnl.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2921,7 +3045,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2945,7 +3069,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.7na4sro3qu.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2966,7 +3090,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2990,7 +3114,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3011,7 +3135,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3027,7 +3151,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.css.jeal3x0ldm.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3048,7 +3172,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3072,7 +3196,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3093,7 +3217,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3109,7 +3233,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3130,7 +3254,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3146,7 +3270,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3167,7 +3291,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3183,7 +3307,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.okkk44j0xs.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3204,7 +3328,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3228,7 +3352,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.f8imaxxbri.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3249,7 +3373,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3273,7 +3397,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.0wve5yxp74.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3294,7 +3418,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3318,7 +3442,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3339,7 +3463,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3355,7 +3479,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.cwzlr5n8x4.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3376,7 +3500,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3400,7 +3524,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3421,7 +3545,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3437,7 +3561,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3458,7 +3582,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3474,7 +3598,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3495,7 +3619,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3511,7 +3635,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.wmug9u23qg.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3532,7 +3656,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3556,7 +3680,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.npxfuf8dg6.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3577,7 +3701,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3601,7 +3725,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3622,7 +3746,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3638,7 +3762,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.css.j75batdsum.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3659,7 +3783,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3683,7 +3807,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3704,7 +3828,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3720,7 +3844,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.16095smhkz.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3741,7 +3865,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3765,7 +3889,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3786,7 +3910,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3802,7 +3926,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3823,7 +3947,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3839,7 +3963,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.vy0bq9ydhf.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3860,7 +3984,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3884,7 +4008,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.b4skse8du6.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3905,7 +4029,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3929,7 +4053,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3950,7 +4074,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3966,7 +4090,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.ab1c3rmv7g.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3987,7 +4111,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4011,7 +4135,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4032,7 +4156,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4048,7 +4172,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4069,7 +4193,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4085,7 +4209,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.56d2bn4wt9.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4106,7 +4230,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4130,7 +4254,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4151,7 +4275,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4167,7 +4291,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.u3xrusw2ol.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4188,7 +4312,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4212,7 +4336,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.tey0rigmnh.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4233,7 +4357,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4257,7 +4381,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4278,7 +4402,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4294,7 +4418,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.css.73kdqttayv.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4315,7 +4439,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4339,7 +4463,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.css.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4360,7 +4484,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4376,7 +4500,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.bpk8xqwxhs.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4397,7 +4521,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4421,7 +4545,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4442,7 +4566,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4458,7 +4582,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.css.8inm30yfxf.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4479,7 +4603,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4503,7 +4627,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.css.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4524,7 +4648,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4540,7 +4664,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.mpyigms19s.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4561,7 +4685,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4585,7 +4709,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4606,7 +4730,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4622,7 +4746,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css.4gxs3k148c.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4643,7 +4767,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4667,7 +4791,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4688,7 +4812,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4704,7 +4828,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.9b9oa1qrmt.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4725,7 +4849,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4749,7 +4873,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4770,7 +4894,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4786,7 +4910,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.fctod5rc9n.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4807,7 +4931,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4831,7 +4955,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4852,7 +4976,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4868,7 +4992,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.ve6x09088i.css",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4889,7 +5013,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4913,7 +5037,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4934,7 +5058,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4950,7 +5074,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.js.kbynt5jhd9.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4971,7 +5095,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4995,7 +5119,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5016,7 +5140,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5032,7 +5156,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.l2av4jpuoj.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5053,7 +5177,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5077,7 +5201,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.25iw1kog22.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5098,7 +5222,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5122,7 +5246,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5143,7 +5267,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5159,7 +5283,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.c2nslu3uf3.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5180,7 +5304,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5204,7 +5328,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5225,7 +5349,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5241,7 +5365,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5262,7 +5386,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5278,7 +5402,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.js.2lgwfvgpvi.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5299,7 +5423,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5323,7 +5447,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5344,7 +5468,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5360,7 +5484,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.m39kt2b5c9.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5381,7 +5505,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5405,7 +5529,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5426,7 +5550,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5442,7 +5566,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5463,7 +5587,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5479,7 +5603,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.js.wsezl0heh6.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5500,7 +5624,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5524,7 +5648,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.um2aeqy4ik.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5545,7 +5669,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5569,7 +5693,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5590,7 +5714,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5606,7 +5730,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.js.6ukhryfubh.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5627,7 +5751,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5651,7 +5775,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.js.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5672,7 +5796,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5688,7 +5812,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5709,7 +5833,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5725,7 +5849,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.js.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5746,7 +5870,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5762,7 +5886,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.js.u33ctipx7g.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5783,7 +5907,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5807,7 +5931,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.zwph15dxgs.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5828,7 +5952,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5852,7 +5976,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.o4kw7cc6tf.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5873,7 +5997,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5897,7 +6021,7 @@
     },
     {
       "Route": "lib/bootstrap/LICENSE",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/LICENSE",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/LICENSE",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5918,7 +6042,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5934,7 +6058,7 @@
     },
     {
       "Route": "lib/bootstrap/LICENSE.81b7ukuj9c",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/bootstrap/LICENSE",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/bootstrap/LICENSE",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5955,7 +6079,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5979,7 +6103,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.47otxtyo56.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6000,7 +6124,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6024,7 +6148,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6045,7 +6169,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6061,7 +6185,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.4v8eqarkd7.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6082,7 +6206,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6106,7 +6230,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6127,7 +6251,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6143,7 +6267,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/LICENSE.356vix0kms.txt",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6164,7 +6288,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6188,7 +6312,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/LICENSE.txt",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6209,7 +6333,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6225,7 +6349,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.ay5nd8zt9x.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery-validation/dist/additional-methods.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6246,7 +6370,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6270,7 +6394,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery-validation/dist/additional-methods.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6291,7 +6415,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6307,7 +6431,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.min.9oaff4kq20.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6328,7 +6452,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6352,7 +6476,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.min.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6373,7 +6497,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6389,7 +6513,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6410,7 +6534,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6426,7 +6550,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.min.b7iojwaux1.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6447,7 +6571,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6471,7 +6595,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.min.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6492,7 +6616,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6508,7 +6632,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.pzqfkb6aqo.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6529,7 +6653,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6553,7 +6677,7 @@
     },
     {
       "Route": "lib/jquery-validation/LICENSE.md",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery-validation/LICENSE.md",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery-validation/LICENSE.md",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6574,7 +6698,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6590,7 +6714,7 @@
     },
     {
       "Route": "lib/jquery-validation/LICENSE.x0q3zqp4vz.md",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery-validation/LICENSE.md",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery-validation/LICENSE.md",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6611,7 +6735,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6635,7 +6759,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.fwhahm2icz.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery/dist/jquery.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery/dist/jquery.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6656,7 +6780,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6680,7 +6804,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery/dist/jquery.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery/dist/jquery.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6701,7 +6825,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6717,7 +6841,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.5pze98is44.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery/dist/jquery.min.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery/dist/jquery.min.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6738,7 +6862,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6762,7 +6886,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.dd6z7egasc.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery/dist/jquery.min.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery/dist/jquery.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6783,7 +6907,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6807,7 +6931,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.js",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery/dist/jquery.min.js",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery/dist/jquery.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6828,7 +6952,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6844,7 +6968,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.map",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery/dist/jquery.min.map",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery/dist/jquery.min.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6865,7 +6989,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6881,7 +7005,7 @@
     },
     {
       "Route": "lib/jquery/LICENSE.mlv21k5csn.txt",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery/LICENSE.txt",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery/LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6902,7 +7026,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6926,7 +7050,7 @@
     },
     {
       "Route": "lib/jquery/LICENSE.txt",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/lib/jquery/LICENSE.txt",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/lib/jquery/LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6947,7 +7071,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 03 Jan 2026 14:57:20 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6962,8 +7086,90 @@
       ]
     },
     {
+      "Route": "logo.nc2ytelt3f.png",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "132397"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mfoy7xkVfu6IcUCmrxp5wGPH7z/7qfqCxxI0jYFNiIk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nc2ytelt3f"
+        },
+        {
+          "Name": "label",
+          "Value": "logo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mfoy7xkVfu6IcUCmrxp5wGPH7z/7qfqCxxI0jYFNiIk="
+        }
+      ]
+    },
+    {
+      "Route": "logo.png",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "132397"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mfoy7xkVfu6IcUCmrxp5wGPH7z/7qfqCxxI0jYFNiIk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mfoy7xkVfu6IcUCmrxp5wGPH7z/7qfqCxxI0jYFNiIk="
+        }
+      ]
+    },
+    {
       "Route": "profilePic.if1lel7pw8.jpg",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/profilePic.jpg",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/profilePic.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6984,7 +7190,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 07 Jan 2026 19:53:51 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7008,7 +7214,7 @@
     },
     {
       "Route": "profilePic.jpg",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/profilePic.jpg",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/profilePic.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7029,7 +7235,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 07 Jan 2026 19:53:51 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7045,7 +7251,7 @@
     },
     {
       "Route": "site.6sx6pifph3.webmanifest",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/site.webmanifest",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/site.webmanifest",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7066,7 +7272,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 Jan 2026 17:05:26 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7090,7 +7296,7 @@
     },
     {
       "Route": "site.webmanifest",
-      "AssetFile": "/home/emmytek/Desktop/NETCoreProjets/Expenses Tracker/ExpensesTracker/wwwroot/site.webmanifest",
+      "AssetFile": "/home/emmytek/Desktop/New Folder 1/ExpenseTracker/ExpensesTracker/wwwroot/site.webmanifest",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7111,7 +7317,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 Jan 2026 17:05:26 GMT"
+          "Value": "Sat, 10 Jan 2026 16:46:27 GMT"
         },
         {
           "Name": "Cache-Control",
