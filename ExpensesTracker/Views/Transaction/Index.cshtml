@@ -3,40 +3,993 @@
 @{
     ViewData["PageTitle"] = "Transactions";
     ViewData["PageActionText"] = "+ New Transaction";
-    ViewData["PageActionUrl"] = "/Transaction/AddOrEdit";}
+    ViewData["PageActionUrl"] = "/Transaction/AddOrEdit";
+    ViewData["CurrentPage"] = "Transactions";
+    ViewData["PageDescription"] = "Manage all your income and expense transactions";
+    
+    var totalCount = Model?.Count() ?? 0;
+    var totalAmount = Model?.Sum(t => t.Amount) ?? 0;
+    var incomeTotal = Model?.Where(t => t.Type == "Income").Sum(t => t.Amount) ?? 0;
+    var expenseTotal = Model?.Where(t => t.Type == "Expense").Sum(t => t.Amount) ?? 0;
+    var balance = incomeTotal - expenseTotal;
+}
 
-<div class="row">
-    <div class="col-md-7">
-        <ejs-grid id="categories" dataSource="@Model" gridLines="None" allowSorting="true" allowPaging="true">
-            <e-grid-pagesettings pageSize="10"></e-grid-pagesettings>
-            <e-grid-columns>
-                <e-grid-column headerText="Category" field="CategoryTitleWithIcon" ></e-grid-column>
-                <e-grid-column headerText="Date" field="Date"  width="110px" format="MMM-dd-yy" textAlign="Left"></e-grid-column>
-                <e-grid-column headerText="Amount" field="FormattedAmount"  width="110px" textAlign="Right"></e-grid-column>
-                <e-grid-column headerText="Actions" width="100px" template="#actionColumnTemplate"></e-grid-column>
-
-                
-            </e-grid-columns>
-        </ejs-grid>
+<!-- Summary Cards -->
+<div class="row mb-4">
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="widget summary total h-100" onclick="filterByType('')" style="cursor: pointer;">
+            <div class="widget-body p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="text-muted mb-1">Total Transactions</h6>
+                        <h3 class="fw-bold mb-0">@totalCount</h3>
+                    </div>
+                    <div class="icon-container bg-primary bg-opacity-10">
+                        <i class="fas fa-exchange-alt fa-lg text-primary"></i>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <small class="text-muted">
+                        <i class="fas fa-info-circle me-1"></i>
+                        Click to view all
+                    </small>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-5">
-        <div class="widget h-100 d-flex justify-content-center align-items-center">
-            <i class="fa-solid fa-money-bill-transfer fa-2xl"></i>
+    
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="widget summary income h-100" onclick="filterByType('Income')" style="cursor: pointer;">
+            <div class="widget-body p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="text-muted mb-1">Total Income</h6>
+                        <h3 class="fw-bold mb-0">@incomeTotal.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-NG"))</h3>
+                    </div>
+                    <div class="icon-container bg-success bg-opacity-10">
+                        <i class="fas fa-arrow-up fa-lg text-success"></i>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <small class="text-muted">
+                        <i class="fas fa-filter me-1"></i>
+                        Click to filter income
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="widget summary expense h-100" onclick="filterByType('Expense')" style="cursor: pointer;">
+            <div class="widget-body p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="text-muted mb-1">Total Expenses</h6>
+                        <h3 class="fw-bold mb-0">@expenseTotal.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-NG"))</h3>
+                    </div>
+                    <div class="icon-container bg-danger bg-opacity-10">
+                        <i class="fas fa-arrow-down fa-lg text-danger"></i>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <small class="text-muted">
+                        <i class="fas fa-filter me-1"></i>
+                        Click to filter expenses
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="widget summary balance h-100">
+            <div class="widget-body p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="text-muted mb-1">Net Balance</h6>
+                        <h3 class="fw-bold mb-0 @(balance >= 0 ? "text-success" : "text-danger")">
+                            @balance.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-NG"))
+                        </h3>
+                    </div>
+                    <div class="icon-container @(balance >= 0 ? "bg-success bg-opacity-10" : "bg-danger bg-opacity-10")">
+                        <i class="fas fa-scale-balanced fa-lg @(balance >= 0 ? "text-success" : "text-danger")"></i>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <small class="text-muted">
+                        <i class="fas fa-calculator me-1"></i>
+                        Income - Expenses
+                    </small>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-<script id="actionColumnTemplate" type="text/x-template">
-    <div class="d-flex flex-row justify-content-start">
-      <a class="btn btn-sm no-a-decoration" href="/Transaction/AddOrEdit/${TransactionId}">
-        <i class="fa-solid fa-pen fa-lg"></i>
-      </a>
-      <form action="/Transaction/Delete/${TransactionId}" method="post">
-      @Html.AntiForgeryToken()
-        <button type="submit" class="btn btn-sm btn-link no-a-decoration"
-            onClick="return confirm(&quot;Are you sure to delete this record?&quot;)">
-            <i class="fa-solid fa-trash-can fa-lg text-danger"></i>
-        </button>
-      </form>
+<!-- Filters & Actions -->
+<div class="row mb-4">
+    <div class="col-md-12">
+        <div class="widget shadow-sm">
+            <div class="widget-body p-3">
+                <div class="row g-3">
+                    <!-- Search -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="fas fa-search"></i>
+                            </span>
+                            <input type="text" id="searchInput" class="form-control" 
+                                   placeholder="Search transactions..." value="@ViewBag.Search">
+                            <button class="btn btn-outline-secondary" type="button" id="clearSearch" 
+                                    @(string.IsNullOrEmpty(ViewBag.Search) ? "style='display:none'" : "")>
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Category Filter -->
+                    <div class="col-xl-2 col-lg-3 col-md-6">
+                        <select id="categoryFilter" class="form-select">
+                            <option value="">All Categories</option>
+                            @if (ViewBag.Categories is SelectList categories)
+                            {
+                                foreach (var item in categories)
+                                {
+                                    <option value="@item.Value" 
+                                            selected="@(item.Value == ViewBag.CategoryId?.ToString())">
+                                        @item.Text
+                                    </option>
+                                }
+                            }
+                        </select>
+                    </div>
+                    
+                    <!-- Type Filter -->
+                    <div class="col-xl-2 col-lg-3 col-md-6">
+                        <select id="typeFilter" class="form-select">
+                            <option value="">All Types</option>
+                            <option value="Income" selected="@(ViewBag.Type == "Income")">Income</option>
+                            <option value="Expense" selected="@(ViewBag.Type == "Expense")">Expense</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Date Range -->
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="fas fa-calendar"></i>
+                            </span>
+                            <input type="date" id="startDate" class="form-control" 
+                                   value="@ViewBag.StartDate" placeholder="From">
+                            <span class="input-group-text">to</span>
+                            <input type="date" id="endDate" class="form-control" 
+                                   value="@ViewBag.EndDate" placeholder="To">
+                        </div>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="col-xl-2 col-lg-6 col-md-12">
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-primary flex-grow-1" onclick="applyFilters()">
+                                <i class="fas fa-filter me-1"></i> Filter
+                            </button>
+                            <button class="btn btn-outline-secondary" onclick="resetFilters()">
+                                <i class="fas fa-redo"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Advanced Filters (Collapsible) -->
+                <div class="row mt-3" id="advancedFilters" style="display: none;">
+                    <div class="col-md-12">
+                        <div class="card border-dashed">
+                            <div class="card-body">
+                                <h6 class="card-title mb-3">
+                                    <i class="fas fa-sliders-h me-2"></i>Advanced Filters
+                                </h6>
+                                <div class="row g-3">
+                                    <div class="col-md-3">
+                                        <label class="form-label">Min Amount</label>
+                                        <input type="number" id="minAmount" class="form-control" 
+                                               value="@ViewBag.MinAmount" placeholder="Min">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">Max Amount</label>
+                                        <input type="number" id="maxAmount" class="form-control" 
+                                               value="@ViewBag.MaxAmount" placeholder="Max">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">Sort By</label>
+                                        <select id="sortBy" class="form-select">
+                                            <option value="Date" selected="@(ViewBag.SortBy == "Date")">Date</option>
+                                            <option value="Amount" selected="@(ViewBag.SortBy == "Amount")">Amount</option>
+                                            <option value="Category" selected="@(ViewBag.SortBy == "Category")">Category</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">Order</label>
+                                        <select id="sortOrder" class="form-select">
+                                            <option value="desc" selected="@(ViewBag.SortOrder == "desc")">Descending</option>
+                                            <option value="asc" selected="@(ViewBag.SortOrder == "asc")">Ascending</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Toggle Advanced Filters -->
+                <div class="text-center mt-3">
+                    <button class="btn btn-sm btn-link" type="button" 
+                            data-bs-toggle="collapse" data-bs-target="#advancedFilters" 
+                            aria-expanded="false" aria-controls="advancedFilters" id="toggleAdvanced">
+                        <i class="fas fa-chevron-down me-1"></i>
+                        <span>Show Advanced Filters</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bulk Actions -->
+<div class="row mb-3" id="bulkActions" style="display: none;">
+    <div class="col-md-12">
+        <div class="alert alert-info d-flex justify-content-between align-items-center">
+            <div>
+                <i class="fas fa-check-circle me-2"></i>
+                <span id="selectedCount">0</span> transactions selected
+            </div>
+            <div class="d-flex gap-2">
+                <button class="btn btn-sm btn-outline-danger" onclick="deleteSelected()">
+                    <i class="fas fa-trash me-1"></i> Delete Selected
+                </button>
+                <button class="btn btn-sm btn-outline-secondary" onclick="clearSelection()">
+                    <i class="fas fa-times me-1"></i> Clear Selection
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Transactions Grid -->
+<div class="row">
+    <div class="col-md-12">
+        <div class="widget shadow-sm">
+            <div class="widget-header d-flex justify-content-between align-items-center p-3">
+                <div>
+                    <h5 class="fw-bold mb-0">
+                        <i class="fas fa-list me-2"></i>Transactions
+                    </h5>
+                    <p class="text-muted mb-0 small">Showing @totalCount transactions</p>
+                </div>
+                <div class="d-flex gap-2">
+                    <!-- Export Dropdown -->
+                    <div class="dropdown">
+                        <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" 
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-download me-1"></i> Export
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a class="dropdown-item" href="#" onclick="exportData('csv')">
+                                    <i class="fas fa-file-csv me-2"></i> CSV
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" onclick="exportData('excel')">
+                                    <i class="fas fa-file-excel me-2"></i> Excel
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" onclick="exportData('pdf')">
+                                    <i class="fas fa-file-pdf me-2"></i> PDF
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- View Toggle -->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary active" 
+                                onclick="setViewMode('grid')" id="gridViewBtn">
+                            <i class="fas fa-th-large"></i>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" 
+                                onclick="setViewMode('list')" id="listViewBtn">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="widget-body p-0">
+                <!-- Grid View -->
+                <div id="gridView">
+                    <ejs-grid id="transactionsGrid" dataSource="@Model" allowSorting="true" allowPaging="true" 
+                              allowFiltering="true" allowSelection="true" enablePersistence="true"
+                              rowSelected="onRowSelected" rowDeselected="onRowDeselected"
+                              toolbar="@(new List<string>() {"Search"})">
+                        <e-grid-pagesettings pageSize="10" pageSizes="true"></e-grid-pagesettings>
+                        <e-grid-filtersettings type="Menu"></e-grid-filtersettings>
+                        <e-grid-selectionsettings type="Multiple" persistSelection="true"></e-grid-selectionsettings>
+                        <e-grid-editSettings allowDeleting="true"></e-grid-editSettings>
+                        <e-grid-columns>
+                            <e-grid-column type="checkbox" width="50"></e-grid-column>
+                            <e-grid-column headerText="Category" field="CategoryTitleWithIcon" width="200"
+                                         template="#categoryTemplate" allowSorting="true" allowFiltering="true"></e-grid-column>
+                            <e-grid-column headerText="Date" field="Date" width="120" format="dd-MMM-yyy"
+                                         template="#dateTemplate" allowSorting="true"></e-grid-column>
+                            <e-grid-column headerText="Amount" field="FormattedAmount" width="150"
+                                         template="#amountTemplate" allowSorting="true" textAlign="Right"></e-grid-column>
+                            <e-grid-column headerText="Type" field="Type" width="100"
+                                         template="#typeTemplate" allowSorting="true" allowFiltering="true"></e-grid-column>
+                            <e-grid-column headerText="Note" field="Note" width="200" 
+                                         template="#noteTemplate" allowFiltering="true"></e-grid-column>
+                            <e-grid-column headerText="Actions" width="120" template="#actionColumnTemplate" allowFiltering="false"></e-grid-column>
+                        </e-grid-columns>
+                    </ejs-grid>
+                </div>
+                
+                <!-- List View (Hidden by default) -->
+                <div id="listView" style="display: none;">
+                    <div class="list-container" id="transactionsList">
+                        @if (Model != null && Model.Any())
+                        {
+                            foreach (var transaction in Model)
+                            {
+                                <div class="list-item" data-id="@transaction.TransactionId">
+                                    <div class="list-item-checkbox">
+                                        <input type="checkbox" class="form-check-input" 
+                                               value="@transaction.TransactionId">
+                                    </div>
+                                    <div class="list-item-icon">
+                                        <i class="@transaction.CategoryIcon fa-lg @(transaction.Type == "Income" ? "text-success" : "text-danger")"></i>
+                                    </div>
+                                    <div class="list-item-content">
+                                        <div class="list-item-title">
+                                            @transaction.Category?.Title
+                                            <span class="badge @transaction.GetTypeBadgeClass() ms-2">
+                                                @transaction.Type
+                                            </span>
+                                        </div>
+                                        <div class="list-item-subtitle">
+                                            <i class="fas fa-calendar-alt me-1"></i>
+                                            @transaction.Date.ToString("MMM dd, yyyy")
+                                            @if (!string.IsNullOrEmpty(transaction.Note))
+                                            {
+                                                <span class="ms-3">
+                                                    <i class="fas fa-sticky-note me-1"></i>
+                                                    @transaction.Note
+                                                </span>
+                                            }
+                                        </div>
+                                    </div>
+                                    <div class="list-item-amount @transaction.GetAmountColorClass() fw-bold">
+                                        @transaction.FormattedAmount
+                                    </div>
+                                    <div class="list-item-actions">
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm btn-link" type="button" 
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end">
+                                                <li>
+                                                    <a class="dropdown-item" href="/Transaction/Details/@transaction.TransactionId">
+                                                        <i class="fas fa-eye me-2"></i>View Details
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="/Transaction/AddOrEdit/@transaction.TransactionId">
+                                                        <i class="fas fa-edit me-2"></i>Edit
+                                                    </a>
+                                                </li>
+                                                <li><hr class="dropdown-divider"></li>
+                                                <li>
+                                                    <a class="dropdown-item text-danger" href="#" 
+                                                       onclick="deleteTransaction(@transaction.TransactionId)">
+                                                        <i class="fas fa-trash me-2"></i>Delete
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            <div class="text-center py-5">
+                                <i class="fas fa-inbox fa-3x text-muted mb-3"></i>
+                                <h5 class="text-muted">No transactions found</h5>
+                                <p class="text-muted mb-4">Start by adding your first transaction</p>
+                                <a href="/Transaction/AddOrEdit" class="btn btn-primary">
+                                    <i class="fas fa-plus me-2"></i> Add Transaction
+                                </a>
+                            </div>
+                        }
+                    </div>
+                    
+                    <!-- List View Pagination -->
+                    <div class="pagination-container p-3 border-top">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination justify-content-center mb-0">
+                                <li class="page-item @(ViewBag.Page <= 1 ? "disabled" : "")">
+                                    <a class="page-link" href="#" onclick="changePage(@ViewBag.Page - 1)">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </a>
+                                </li>
+                                @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                                {
+                                    <li class="page-item @(i == ViewBag.Page ? "active" : "")">
+                                        <a class="page-link" href="#" onclick="changePage(@i)">@i</a>
+                                    </li>
+                                }
+                                <li class="page-item @(ViewBag.Page >= ViewBag.TotalPages ? "disabled" : "")">
+                                    <a class="page-link" href="#" onclick="changePage(@ViewBag.Page + 1)">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Grid Info -->
+            <div class="widget-footer d-flex justify-content-between align-items-center p-3">
+                <div class="text-muted small">
+                    Showing page @ViewBag.Page of @ViewBag.TotalPages 
+                    (@((ViewBag.Page - 1) * ViewBag.PageSize + 1)-@Math.Min(ViewBag.Page * ViewBag.PageSize, ViewBag.TotalCount) of @ViewBag.TotalCount items)
+                </div>
+                <div class="d-flex gap-2">
+                    <select class="form-select form-select-sm" style="width: auto;" 
+                            onchange="changePageSize(this.value)">
+                        <option value="5" selected="@(ViewBag.PageSize == 5)">5 per page</option>
+                        <option value="10" selected="@(ViewBag.PageSize == 10)">10 per page</option>
+                        <option value="25" selected="@(ViewBag.PageSize == 25)">25 per page</option>
+                        <option value="50" selected="@(ViewBag.PageSize == 50)">50 per page</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Templates for Grid -->
+<script id="categoryTemplate" type="text/x-template">
+    <div class="d-flex align-items-center">
+        <div class="category-icon me-3">
+            <i class="${CategoryIcon ? 'fas ' + CategoryIcon : 'fas fa-tag'} ${Type === 'Income' ? 'text-success' : 'text-danger'}"></i>
+        </div>
+        <div>
+            <div class="fw-semibold">${Category?.Title || 'Uncategorized'}</div>
+            <small class="text-muted">${Category?.Type || ''}</small>
+        </div>
     </div>
 </script>
+
+<script id="dateTemplate" type="text/x-template">
+    <div>
+        <div>${formatDate(Date)}</div>
+        <small class="text-muted">${getTimeAgo(Date)}</small>
+    </div>
+</script>
+
+<script id="amountTemplate" type="text/x-template">
+    <div class="text-end">
+        <div class="fw-bold ${Type === 'Income' ? 'text-success' : 'text-danger'}">
+            ${FormattedAmount}
+        </div>
+        <small class="text-muted">${formatNumber(Amount)}</small>
+    </div>
+</script>
+
+<script id="typeTemplate" type="text/x-template">
+    <span class="badge ${Type === 'Income' ? 'bg-success' : 'bg-danger'}">
+        <i class="fas ${Type === 'Income' ? 'fa-arrow-up' : 'fa-arrow-down'} me-1"></i>
+        ${Type}
+    </span>
+</script>
+
+<script id="noteTemplate" type="text/x-template">
+    <div class="text-truncate" style="max-width: 200px;" title="${Note}">
+        ${Note || '-'}
+    </div>
+</script>
+
+<script id="actionColumnTemplate" type="text/x-template">
+    <div class="d-flex gap-2">
+        <a class="btn btn-sm btn-outline-primary" href="/Transaction/AddOrEdit/${TransactionId}" 
+           title="Edit" data-bs-toggle="tooltip">
+            <i class="fas fa-edit"></i>
+        </a>
+        <a class="btn btn-sm btn-outline-info" href="/Transaction/Details/${TransactionId}" 
+           title="View Details" data-bs-toggle="tooltip">
+            <i class="fas fa-eye"></i>
+        </a>
+        <button type="button" class="btn btn-sm btn-outline-danger" 
+                onclick="deleteTransaction(${TransactionId})" title="Delete" data-bs-toggle="tooltip">
+            <i class="fas fa-trash"></i>
+        </button>
+    </div>
+</script>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize tooltips
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+            
+            // Toggle advanced filters
+            const toggleAdvanced = document.getElementById('toggleAdvanced');
+            const advancedFilters = document.getElementById('advancedFilters');
+            
+            toggleAdvanced.addEventListener('click', function() {
+                const icon = this.querySelector('i');
+                const text = this.querySelector('span');
+                
+                if (advancedFilters.style.display === 'none') {
+                    advancedFilters.style.display = 'block';
+                    icon.className = 'fas fa-chevron-up me-1';
+                    text.textContent = 'Hide Advanced Filters';
+                } else {
+                    advancedFilters.style.display = 'none';
+                    icon.className = 'fas fa-chevron-down me-1';
+                    text.textContent = 'Show Advanced Filters';
+                }
+            });
+            
+            // Search input clear button
+            const searchInput = document.getElementById('searchInput');
+            const clearSearch = document.getElementById('clearSearch');
+            
+            searchInput.addEventListener('input', function() {
+                if (this.value.trim()) {
+                    clearSearch.style.display = 'block';
+                } else {
+                    clearSearch.style.display = 'none';
+                }
+            });
+            
+            clearSearch.addEventListener('click', function() {
+                searchInput.value = '';
+                this.style.display = 'none';
+            });
+            
+            // Initialize date pickers with constraints
+            const startDate = document.getElementById('startDate');
+            const endDate = document.getElementById('endDate');
+            
+            if (startDate && endDate) {
+                startDate.max = endDate.value || new Date().toISOString().split('T')[0];
+                endDate.min = startDate.value || '2000-01-01';
+                endDate.max = new Date().toISOString().split('T')[0];
+                
+                startDate.addEventListener('change', function() {
+                    endDate.min = this.value;
+                });
+                
+                endDate.addEventListener('change', function() {
+                    startDate.max = this.value;
+                });
+            }
+            
+            // Set initial view mode
+            const viewMode = localStorage.getItem('transactionViewMode') || 'grid';
+            setViewMode(viewMode);
+            
+            // Update bulk actions based on grid selection
+            updateBulkActions();
+        });
+        
+        // View mode functions
+        function setViewMode(mode) {
+            const gridView = document.getElementById('gridView');
+            const listView = document.getElementById('listView');
+            const gridViewBtn = document.getElementById('gridViewBtn');
+            const listViewBtn = document.getElementById('listViewBtn');
+            
+            if (mode === 'grid') {
+                gridView.style.display = 'block';
+                listView.style.display = 'none';
+                gridViewBtn.classList.add('active');
+                listViewBtn.classList.remove('active');
+            } else {
+                gridView.style.display = 'none';
+                listView.style.display = 'block';
+                gridViewBtn.classList.remove('active');
+                listViewBtn.classList.add('active');
+            }
+            
+            localStorage.setItem('transactionViewMode', mode);
+        }
+        
+        // Filter functions
+        function applyFilters() {
+            const params = new URLSearchParams();
+            
+            // Basic filters
+            const search = document.getElementById('searchInput').value;
+            const category = document.getElementById('categoryFilter').value;
+            const type = document.getElementById('typeFilter').value;
+            const startDate = document.getElementById('startDate').value;
+            const endDate = document.getElementById('endDate').value;
+            
+            if (search) params.append('search', search);
+            if (category) params.append('categoryId', category);
+            if (type) params.append('type', type);
+            if (startDate) params.append('startDate', startDate);
+            if (endDate) params.append('endDate', endDate);
+            
+            // Advanced filters
+            const minAmount = document.getElementById('minAmount').value;
+            const maxAmount = document.getElementById('maxAmount').value;
+            const sortBy = document.getElementById('sortBy').value;
+            const sortOrder = document.getElementById('sortOrder').value;
+            
+            if (minAmount) params.append('minAmount', minAmount);
+            if (maxAmount) params.append('maxAmount', maxAmount);
+            if (sortBy) params.append('sortBy', sortBy);
+            if (sortOrder) params.append('sortOrder', sortOrder);
+            
+            // Page and page size
+            params.append('page', '1');
+            params.append('pageSize', '@ViewBag.PageSize');
+            
+            window.location.href = '/Transaction?' + params.toString();
+        }
+        
+        function resetFilters() {
+            window.location.href = '/Transaction';
+        }
+        
+        function filterByType(type) {
+            document.getElementById('typeFilter').value = type;
+            applyFilters();
+        }
+        
+        // Pagination functions
+        function changePage(page) {
+            if (page < 1 || page > @ViewBag.TotalPages) return;
+            
+            const params = new URLSearchParams(window.location.search);
+            params.set('page', page);
+            window.location.href = '/Transaction?' + params.toString();
+        }
+        
+        function changePageSize(size) {
+            const params = new URLSearchParams(window.location.search);
+            params.set('pageSize', size);
+            params.set('page', '1');
+            window.location.href = '/Transaction?' + params.toString();
+        }
+        
+        // Grid selection handlers
+        function onRowSelected(args) {
+            updateBulkActions();
+        }
+        
+        function onRowDeselected(args) {
+            updateBulkActions();
+        }
+        
+        function updateBulkActions() {
+            const grid = document.getElementById('transactionsGrid');
+            if (!grid || !grid.ej2_instances || !grid.ej2_instances[0]) return;
+            
+            const selectedRows = grid.ej2_instances[0].getSelectedRecords();
+            const bulkActions = document.getElementById('bulkActions');
+            const selectedCount = document.getElementById('selectedCount');
+            
+            if (selectedRows.length > 0) {
+                bulkActions.style.display = 'block';
+                selectedCount.textContent = selectedRows.length;
+            } else {
+                bulkActions.style.display = 'none';
+            }
+        }
+        
+        function clearSelection() {
+            const grid = document.getElementById('transactionsGrid');
+            if (grid && grid.ej2_instances && grid.ej2_instances[0]) {
+                grid.ej2_instances[0].clearSelection();
+            }
+            updateBulkActions();
+        }
+        
+        // Delete functions
+        function deleteTransaction(id) {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "This will permanently delete the transaction!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'Yes, delete it!',
+                cancelButtonText: 'Cancel'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Submit delete request
+                    fetch(`/Transaction/Delete/${id}`, {
+                        method: 'POST',
+                        headers: {
+                            'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value,
+                            'Content-Type': 'application/x-www-form-urlencoded'
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            showToast('Transaction deleted successfully!', 'success');
+                            // Reload the page
+                            setTimeout(() => location.reload(), 1000);
+                        } else {
+                            showToast(data.message || 'Error deleting transaction', 'error');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        showToast('An error occurred', 'error');
+                    });
+                }
+            });
+        }
+        
+        function deleteSelected() {
+            const grid = document.getElementById('transactionsGrid');
+            if (!grid || !grid.ej2_instances || !grid.ej2_instances[0]) return;
+            
+            const selectedRows = grid.ej2_instances[0].getSelectedRecords();
+            
+            if (selectedRows.length === 0) {
+                showToast('No transactions selected', 'warning');
+                return;
+            }
+            
+            const transactionIds = selectedRows.map(row => row.TransactionId);
+            
+            Swal.fire({
+                title: `Delete ${selectedRows.length} transactions?`,
+                text: "This action cannot be undone!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'Yes, delete them!',
+                cancelButtonText: 'Cancel'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Send bulk delete request
+                    fetch('/Transaction/BulkDelete', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
+                        },
+                        body: JSON.stringify(transactionIds)
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            showToast(data.message, 'success');
+                            // Reload the page
+                            setTimeout(() => location.reload(), 1000);
+                        } else {
+                            showToast(data.message || 'Error deleting transactions', 'error');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        showToast('An error occurred', 'error');
+                    });
+                }
+            });
+        }
+        
+        // Export functions
+        function exportData(format) {
+            const params = new URLSearchParams(window.location.search);
+            params.set('format', format);
+            window.location.href = '/Transaction/Export?' + params.toString();
+        }
+        
+        // Utility functions for templates
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-US', {
+                month: 'short',
+                day: '2-digit',
+                year: 'numeric'
+            });
+        }
+        
+        function getTimeAgo(dateString) {
+            const date = new Date(dateString);
+            const now = new Date();
+            const diffMs = now - date;
+            const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+            
+            if (diffDays === 0) return 'Today';
+            if (diffDays === 1) return 'Yesterday';
+            if (diffDays < 7) return `${diffDays} days ago`;
+            if (diffDays < 30) return `${Math.floor(diffDays / 7)} weeks ago`;
+            if (diffDays < 365) return `${Math.floor(diffDays / 30)} months ago`;
+            return `${Math.floor(diffDays / 365)} years ago`;
+        }
+        
+        function formatNumber(number) {
+            return new Intl.NumberFormat('en-NG', {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            }).format(number);
+        }
+        
+        // Toast notification
+        function showToast(message, type = 'info') {
+            const toastContainer = document.getElementById('toastContainer') || createToastContainer();
+            const toastId = 'toast-' + Date.now();
+            
+            const icon = {
+                'success': 'fa-check-circle',
+                'error': 'fa-exclamation-circle',
+                'warning': 'fa-exclamation-triangle',
+                'info': 'fa-info-circle'
+            }[type] || 'fa-bell';
+            
+            const toastHtml = `
+                <div id="${toastId}" class="toast align-items-center text-white bg-${type} border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="d-flex">
+                        <div class="toast-body">
+                            <i class="fas ${icon} me-2"></i>
+                            ${message}
+                        </div>
+                        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                </div>
+            `;
+            
+            toastContainer.innerHTML += toastHtml;
+            const toastElement = document.getElementById(toastId);
+            const toast = new bootstrap.Toast(toastElement, {
+                autohide: true,
+                delay: 3000
+            });
+            toast.show();
+            
+            toastElement.addEventListener('hidden.bs.toast', function () {
+                this.remove();
+            });
+        }
+        
+        function createToastContainer() {
+            const container = document.createElement('div');
+            container.id = 'toastContainer';
+            container.className = 'toast-container position-fixed top-0 end-0 p-3';
+            container.style.zIndex = '1060';
+            document.body.appendChild(container);
+            return container;
+        }
+    </script>
+    
+    <style>
+        /* List View Styles */
+        .list-container {
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        
+        .list-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--gray-200);
+            transition: all 0.3s ease;
+        }
+        
+        .dark-mode .list-item {
+            border-color: var(--gray-300);
+        }
+        
+        .list-item:hover {
+            background-color: rgba(var(--primary-rgb), 0.05);
+        }
+        
+        .dark-mode .list-item:hover {
+            background-color: rgba(var(--primary-rgb), 0.1);
+        }
+        
+        .list-item-checkbox {
+            width: 40px;
+            flex-shrink: 0;
+        }
+        
+        .list-item-icon {
+            width: 40px;
+            flex-shrink: 0;
+            text-align: center;
+        }
+        
+        .list-item-content {
+            flex-grow: 1;
+            min-width: 0;
+            padding: 0 1rem;
+        }
+        
+        .list-item-title {
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+        
+        .list-item-subtitle {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+        }
+        
+        .dark-mode .list-item-subtitle {
+            color: var(--gray-500);
+        }
+        
+        .list-item-amount {
+            width: 120px;
+            flex-shrink: 0;
+            text-align: right;
+            font-size: 1.1rem;
+        }
+        
+        .list-item-actions {
+            width: 40px;
+            flex-shrink: 0;
+            text-align: center;
+        }
+        
+        /* Pagination */
+        .pagination-container {
+            background-color: var(--gray-100);
+        }
+        
+        .dark-mode .pagination-container {
+            background-color: var(--gray-200);
+        }
+        
+        /* Empty State */
+        .text-center.py-5 {
+            padding: 3rem 1rem;
+        }
+        
+        /* Responsive adjustments */
+        @@media (max-width: 768px) {
+            .list-item {
+                flex-wrap: wrap;
+                padding: 0.75rem;
+            }
+            
+            .list-item-content {
+                order: 3;
+                width: 100%;
+                padding: 0.5rem 0;
+            }
+            
+            .list-item-amount {
+                order: 2;
+                width: auto;
+                flex-grow: 1;
+                text-align: left;
+                padding-left: 1rem;
+            }
+            
+            .list-item-actions {
+                order: 1;
+                width: auto;
+            }
+        }
+    </style>
+}

@@ -1,50 +1,598 @@
 @model ExpensesTracker.Models.Transaction
 
 @{
-    ViewData["PageTitle"] = Model.TransactionId == 0 ? "Create a new transaction" : "Edit transaction";
+    ViewData["PageTitle"] = Model.TransactionId == 0 ? "Add New Transaction" : "Edit Transaction";
+    ViewData["PageActionText"] = "← Back to List";
+    ViewData["PageActionUrl"] = "/Transaction";
+    ViewData["PageActionIcon"] = "fa-arrow-left";
+    ViewData["CurrentPage"] = "Transactions";
+    ViewData["PageDescription"] = Model.TransactionId == 0 ? "Record a new income or expense" : "Update transaction details";
 }
 
-
-<div class="row">
-    <div class="col-md-7">
-         <div class="widget p-5" style="background-color:#212b36">
-            <form asp-action="AddOrEdit">
-                <input type="hidden" name="TransactionId" value="@Model.TransactionId" />
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <div class="mb-3">
-                    <ejs-datepicker id="date" ejs-for="Date" placeholder="Date" format="MMM-dd-yy" floatLabelType="Always"></ejs-datepicker>
+<div class="row justify-content-center">
+    <div class="col-xxl-8 col-xl-10">
+        <div class="widget shadow-lg">
+            <div class="widget-header bg-gradient-primary text-white p-4 rounded-top">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h4 class="mb-0">
+                            <i class="fas @(Model.TransactionId == 0 ? "fa-plus-circle" : "fa-edit") me-2"></i>
+                            @ViewData["PageTitle"]
+                        </h4>
+                        <p class="mb-0 opacity-75">@ViewData["PageDescription"]</p>
+                    </div>
+                    <div class="transaction-type-badge">
+                        @if (Model.CategoryId > 0)
+                        {
+                            <span class="badge @(Model.Type == "Income" ? "bg-success" : "bg-danger") px-3 py-2">
+                                <i class="fas @(Model.Type == "Income" ? "fa-arrow-up" : "fa-arrow-down") me-1"></i>
+                                @(Model.Type ?? "Transaction")
+                            </span>
+                        }
+                    </div>
                 </div>
-                 <div class="mb-3">
-                    <ejs-dropdownlist id="ddlCategory" ejs-for="CategoryId" dataSource="@ViewBag.Categories" placeholder="Category" floatLabelType="Always" allowFiltering="true" ignoreAccent="true" filterType="Contains">
-                        <e-dropdownlist-fields value="CategoryId" text="TitleWithIcon"></e-dropdownlist-fields>
-                    </ejs-dropdownlist>
-                    <span asp-validation-for="CategoryId" class="text-danger" fs-3></span>
-
-                </div>
-                <div class="mb-3">
-                    <ejs-numerictextbox id="amount" ejs-for="Amount" placeholder="Amount" floatLabelType="Always" min="0" format="'₦'###,###,##0"></ejs-numerictextbox>
-                    <span asp-validation-for="Amount" class="text-danger" fs-3></span>
-                </div>
-                <div class="mb-3">
-                   <ejs-textbox id="note" placeholder="Note" ejs-for="Note" floatLabelType="Always" multiline="true"></ejs-textbox>
-                    <span asp-validation-for="Note" class="text-danger"></span>
-                </div>
-                <div>
-                    <ejs-button id="submit" type="submit" content="Submit" cssClass="e-success"></ejs-button>
-                </div>
-            </form>
-        </div>
-    </div>
-    <div class="col-md-5">
-        <div class="widget h-100 d-flex justify-content-center align-items-center" >
-            <i class="fa-solid fa-money-bill-transfer fa-2xl"></i>
+            </div>
+            
+            <div class="widget-body p-4">
+                <form asp-action="AddOrEdit" id="transactionForm" class="needs-validation" novalidate>
+                    @Html.AntiForgeryToken()
+                    
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert">
+                        <i class="fas fa-exclamation-triangle me-2"></i>Please correct the errors below.
+                    </div>
+                    
+                    <input type="hidden" asp-for="TransactionId" />
+                    
+                    <div class="row g-4">
+                        <!-- Left Column -->
+                        <div class="col-lg-6">
+                            <!-- Amount Field -->
+                            <div class="mb-4">
+                                <label asp-for="Amount" class="form-label fw-semibold">
+                                    Amount <span class="text-danger">*</span>
+                                </label>
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-text bg-light">
+                                        <i class="fas fa-naira-sign"></i>
+                                    </span>
+                                    <ejs-numerictextbox id="amount" ejs-for="Amount" 
+                                                       placeholder="0.00" floatLabelType="Never"
+                                                       min="0.01" step="100" format="N2"
+                                                       cssClass="form-control" showSpinButton="true">
+                                    </ejs-numerictextbox>
+                                </div>
+                                <span asp-validation-for="Amount" class="text-danger small d-block mt-1"></span>
+                                <div class="form-text">Enter the transaction amount</div>
+                            </div>
+                            
+                            <!-- Category Field -->
+                            <div class="mb-4">
+                                <label asp-for="CategoryId" class="form-label fw-semibold">
+                                    Category <span class="text-danger">*</span>
+                                </label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light">
+                                        <i class="fas fa-folder"></i>
+                                    </span>
+                                    <ejs-dropdownlist id="ddlCategory" ejs-for="CategoryId" 
+                                                     dataSource="@ViewBag.Categories" placeholder="Select Category"
+                                                     floatLabelType="Never" allowFiltering="true" 
+                                                     ignoreAccent="true" filterType="Contains"
+                                                     cssClass="form-select" popupHeight="300px"
+                                                     change="onCategoryChange">
+                                        <e-dropdownlist-fields value="CategoryId" text="TitleWithIcon"></e-dropdownlist-fields>
+                                    </ejs-dropdownlist>
+                                    <button type="button" class="btn btn-outline-secondary" 
+                                            onclick="quickAddCategory()" title="Add New Category">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <span asp-validation-for="CategoryId" class="text-danger small d-block mt-1"></span>
+                                <div class="form-text">Select income or expense category</div>
+                            </div>
+                            
+                            <!-- Date Field -->
+                            <div class="mb-4">
+                                <label asp-for="Date" class="form-label fw-semibold">
+                                    Date <span class="text-danger">*</span>
+                                </label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light">
+                                        <i class="fas fa-calendar"></i>
+                                    </span>
+                                    <ejs-datepicker id="date" ejs-for="Date" placeholder="Select Date"
+                                                   format="dd-MMM-yyyy" cssClass="form-control"
+                                                   showClearButton="false" showTodayButton="true">
+                                    </ejs-datepicker>
+                                    <button type="button" class="btn btn-outline-secondary" 
+                                            onclick="setDate('today')" title="Today">
+                                        Today
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary" 
+                                            onclick="setDate('yesterday')" title="Yesterday">
+                                        Yesterday
+                                    </button>
+                                </div>
+                                <span asp-validation-for="Date" class="text-danger small d-block mt-1"></span>
+                                <div class="form-text">Select transaction date</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Right Column -->
+                        <div class="col-lg-6">
+                            <!-- Note Field -->
+                            <div class="mb-4">
+                                <label asp-for="Note" class="form-label fw-semibold">
+                                    Note / Description
+                                </label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light align-items-start pt-2">
+                                        <i class="fas fa-sticky-note"></i>
+                                    </span>
+                                    <ejs-textbox id="note" ejs-for="Note" placeholder="Add a note (optional)"
+                                                multiline="true" rows="4" cssClass="form-control"
+                                                floatLabelType="Never">
+                                    </ejs-textbox>
+                                </div>
+                                <span asp-validation-for="Note" class="text-danger small d-block mt-1"></span>
+                                <div class="form-text">Add optional description or memo</div>
+                                <div class="mt-2">
+                                    <small class="text-muted">
+                                        <i class="fas fa-lightbulb me-1"></i>
+                                        Quick notes: 
+                                        <button type="button" class="btn btn-xs btn-outline-secondary ms-1" 
+                                                onclick="setNote('Lunch')">Lunch</button>
+                                        <button type="button" class="btn btn-xs btn-outline-secondary ms-1" 
+                                                onclick="setNote('Transport')">Transport</button>
+                                        <button type="button" class="btn btn-xs btn-outline-secondary ms-1" 
+                                                onclick="setNote('Shopping')">Shopping</button>
+                                    </small>
+                                </div>
+                            </div>
+                            
+                            <!-- Transaction Preview -->
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Preview</label>
+                                <div class="card border-dashed bg-light">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div class="transaction-preview-icon">
+                                                <i id="previewIcon" class="fas fa-question-circle fa-2x text-muted"></i>
+                                            </div>
+                                            <div class="transaction-preview-amount">
+                                                <span id="previewAmount" class="h4 fw-bold">₦0.00</span>
+                                            </div>
+                                        </div>
+                                        <div class="transaction-preview-details">
+                                            <div class="mb-2">
+                                                <small class="text-muted">Category:</small>
+                                                <div id="previewCategory" class="fw-semibold">Select a category</div>
+                                            </div>
+                                            <div class="mb-2">
+                                                <small class="text-muted">Date:</small>
+                                                <div id="previewDate" class="fw-semibold">@DateTime.Today.ToString("dd MMM yyyy")</div>
+                                            </div>
+                                            <div>
+                                                <small class="text-muted">Note:</small>
+                                                <div id="previewNote" class="text-truncate">No note added</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Form Actions -->
+                    <div class="row mt-5">
+                        <div class="col-12">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <a href="@ViewData["PageActionUrl"]" class="btn btn-outline-secondary">
+                                        <i class="fas fa-arrow-left me-2"></i>Cancel
+                                    </a>
+                                    <button type="button" class="btn btn-outline-danger ms-2" 
+                                            onclick="resetForm()">
+                                        <i class="fas fa-redo me-2"></i>Reset
+                                    </button>
+                                </div>
+                                <div>
+                                    @if (Model.TransactionId > 0)
+                                    {
+                                        <button type="button" class="btn btn-outline-danger me-2" 
+                                                onclick="deleteTransaction(@Model.TransactionId)">
+                                            <i class="fas fa-trash me-2"></i>Delete
+                                        </button>
+                                    }
+                                    <button type="submit" class="btn btn-primary px-5">
+                                        <i class="fas @(Model.TransactionId == 0 ? "fa-save" : "fa-check") me-2"></i>
+                                        @(Model.TransactionId == 0 ? "Save Transaction" : "Update Transaction")
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
 
-@* @section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptPartial");
-    }
-} *@
+<!-- Quick Add Category Modal -->
+<div class="modal fade" id="quickCategoryModal" tabindex="-1" aria-labelledby="quickCategoryModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="quickCategoryModalLabel">
+                    <i class="fas fa-plus-circle me-2"></i>Add New Category
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="quickCategoryForm">
+                    <div class="mb-3">
+                        <label class="form-label">Category Name</label>
+                        <input type="text" class="form-control" id="quickCategoryName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Type</label>
+                        <div class="btn-group w-100" role="group">
+                            <input type="radio" class="btn-check" name="quickCategoryType" id="quickTypeIncome" value="Income">
+                            <label class="btn btn-outline-success" for="quickTypeIncome">
+                                <i class="fas fa-arrow-up me-1"></i>Income
+                            </label>
+                            <input type="radio" class="btn-check" name="quickCategoryType" id="quickTypeExpense" value="Expense" checked>
+                            <label class="btn btn-outline-danger" for="quickTypeExpense">
+                                <i class="fas fa-arrow-down me-1"></i>Expense
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="saveQuickCategory()">Add Category</button>
+            </div>
+        </div>
+    </div>
+</div>
 
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize form validation
+            const form = document.getElementById('transactionForm');
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+            
+            // Initialize Syncfusion components
+            initializeComponents();
+            
+            // Update preview on input changes
+            setupPreviewUpdates();
+            
+            // Set initial preview
+            updatePreview();
+        });
+        
+        function initializeComponents() {
+            // Initialize amount field with currency formatting
+            const amountControl = document.getElementById('amount');
+            if (amountControl && amountControl.ej2_instances && amountControl.ej2_instances[0]) {
+                amountControl.ej2_instances[0].format = 'N2';
+                amountControl.ej2_instances[0].min = 0.01;
+            }
+            
+            // Initialize date picker
+            const dateControl = document.getElementById('date');
+            if (dateControl && dateControl.ej2_instances && dateControl.ej2_instances[0]) {
+                dateControl.ej2_instances[0].value = new Date('@Model.Date.ToString("yyyy-MM-dd")');
+            }
+        }
+        
+        function setupPreviewUpdates() {
+            // Amount change
+            document.getElementById('amount').addEventListener('change', updatePreview);
+            document.getElementById('amount').addEventListener('input', updatePreview);
+            
+            // Category change
+            const categoryControl = document.getElementById('ddlCategory');
+            if (categoryControl) {
+                categoryControl.addEventListener('change', updatePreview);
+            }
+            
+            // Date change
+            const dateControl = document.getElementById('date');
+            if (dateControl) {
+                dateControl.addEventListener('change', updatePreview);
+            }
+            
+            // Note change
+            document.getElementById('note').addEventListener('input', updatePreview);
+        }
+        
+        function updatePreview() {
+            // Update amount
+            const amount = document.getElementById('amount').value || '0';
+            const formattedAmount = new Intl.NumberFormat('en-NG', {
+                style: 'currency',
+                currency: 'NGN',
+                minimumFractionDigits: 2
+            }).format(parseFloat(amount) || 0);
+            
+            document.getElementById('previewAmount').textContent = formattedAmount;
+            
+            // Update category
+            const categoryControl = document.getElementById('ddlCategory');
+            let categoryText = 'Select a category';
+            let categoryIcon = 'fa-question-circle';
+            let categoryType = '';
+            
+            if (categoryControl && categoryControl.value) {
+                const selectedOption = categoryControl.querySelector(`option[value="${categoryControl.value}"]`);
+                if (selectedOption) {
+                    categoryText = selectedOption.textContent;
+                    // Extract icon from text (format: "icon name")
+                    const match = selectedOption.textContent.match(/^([^ ]+) (.+)$/);
+                    if (match) {
+                        categoryIcon = match[1];
+                        categoryText = match[2];
+                    }
+                    
+                    // Determine type from icon or text
+                    categoryType = categoryText.includes('Income') || categoryIcon.includes('arrow-up') ? 'Income' : 'Expense';
+                }
+            }
+            
+            document.getElementById('previewCategory').textContent = categoryText;
+            document.getElementById('previewIcon').className = `fas ${categoryIcon} fa-2x ${categoryType === 'Income' ? 'text-success' : 'text-danger'}`;
+            
+            // Update date
+            const dateControl = document.getElementById('date');
+            let dateText = '@DateTime.Today.ToString("dd MMM yyyy")';
+            
+            if (dateControl && dateControl.value) {
+                const date = new Date(dateControl.value);
+                dateText = date.toLocaleDateString('en-US', {
+                    day: '2-digit',
+                    month: 'short',
+                    year: 'numeric'
+                });
+            }
+            
+            document.getElementById('previewDate').textContent = dateText;
+            
+            // Update note
+            const note = document.getElementById('note').value;
+            document.getElementById('previewNote').textContent = note || 'No note added';
+            if (note && note.length > 50) {
+                document.getElementById('previewNote').textContent = note.substring(0, 50) + '...';
+            }
+            
+            // Update amount color based on type
+            const previewAmount = document.getElementById('previewAmount');
+            previewAmount.className = `h4 fw-bold ${categoryType === 'Income' ? 'text-success' : 'text-danger'}`;
+        }
+        
+        function onCategoryChange(args) {
+            updatePreview();
+            
+            // Update transaction type badge
+            const categoryControl = document.getElementById('ddlCategory');
+            const selectedOption = categoryControl.querySelector(`option[value="${args.value}"]`);
+            
+            if (selectedOption) {
+                const text = selectedOption.textContent;
+                const isIncome = text.includes('Income') || text.includes('💰') || text.includes('📈');
+                const badge = document.querySelector('.transaction-type-badge .badge');
+                
+                if (badge) {
+                    badge.className = `badge ${isIncome ? 'bg-success' : 'bg-danger'} px-3 py-2`;
+                    badge.innerHTML = `<i class="fas ${isIncome ? 'fa-arrow-up' : 'fa-arrow-down'} me-1"></i>${isIncome ? 'Income' : 'Expense'}`;
+                }
+            }
+        }
+        
+        function setDate(type) {
+            const dateControl = document.getElementById('date');
+            if (!dateControl || !dateControl.ej2_instances || !dateControl.ej2_instances[0]) return;
+            
+            const today = new Date();
+            let targetDate;
+            
+            switch (type) {
+                case 'today':
+                    targetDate = today;
+                    break;
+                case 'yesterday':
+                    targetDate = new Date(today);
+                    targetDate.setDate(today.getDate() - 1);
+                    break;
+                case 'tomorrow':
+                    targetDate = new Date(today);
+                    targetDate.setDate(today.getDate() + 1);
+                    break;
+                default:
+                    targetDate = today;
+            }
+            
+            dateControl.ej2_instances[0].value = targetDate;
+            updatePreview();
+        }
+        
+        function setNote(text) {
+            const noteControl = document.getElementById('note');
+            if (noteControl && noteControl.ej2_instances && noteControl.ej2_instances[0]) {
+                noteControl.ej2_instances[0].value = text;
+                updatePreview();
+            }
+        }
+        
+        function resetForm() {
+            if (confirm('Are you sure you want to reset the form? All changes will be lost.')) {
+                document.getElementById('transactionForm').reset();
+                
+                // Reset Syncfusion controls
+                const amountControl = document.getElementById('amount');
+                if (amountControl && amountControl.ej2_instances) {
+                    amountControl.ej2_instances[0].value = null;
+                }
+                
+                const categoryControl = document.getElementById('ddlCategory');
+                if (categoryControl && categoryControl.ej2_instances) {
+                    categoryControl.ej2_instances[0].value = null;
+                }
+                
+                const dateControl = document.getElementById('date');
+                if (dateControl && dateControl.ej2_instances) {
+                    dateControl.ej2_instances[0].value = new Date();
+                }
+                
+                updatePreview();
+            }
+        }
+        
+        function quickAddCategory() {
+            const modal = new bootstrap.Modal(document.getElementById('quickCategoryModal'));
+            modal.show();
+        }
+        
+        function saveQuickCategory() {
+            const name = document.getElementById('quickCategoryName').value;
+            const type = document.querySelector('input[name="quickCategoryType"]:checked').value;
+            
+            if (!name.trim()) {
+                alert('Please enter category name');
+                return;
+            }
+            
+            // Send AJAX request to create category
+            fetch('/Category/QuickAdd', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
+                },
+                body: JSON.stringify({
+                    title: name,
+                    type: type,
+                    icon: type === 'Income' ? '💰' : '💸'
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Add new category to dropdown
+                    const categoryControl = document.getElementById('ddlCategory');
+                    if (categoryControl && categoryControl.ej2_instances) {
+                        const dropdown = categoryControl.ej2_instances[0];
+                        
+                        // Add new item to data source
+                        const newItem = {
+                            CategoryId: data.categoryId,
+                            TitleWithIcon: `${data.icon} ${name}`
+                        };
+                        
+                        dropdown.dataSource.push(newItem);
+                        dropdown.value = data.categoryId;
+                        dropdown.refresh();
+                        
+                        // Close modal
+                        bootstrap.Modal.getInstance(document.getElementById('quickCategoryModal')).hide();
+                        
+                        // Clear form
+                        document.getElementById('quickCategoryForm').reset();
+                        
+                        // Show success message
+                        showToast('Category added successfully!', 'success');
+                    }
+                } else {
+                    alert(data.message || 'Error adding category');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error adding category');
+            });
+        }
+        
+        function deleteTransaction(id) {
+            Swal.fire({
+                title: 'Delete Transaction?',
+                text: "This action cannot be undone!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'Yes, delete it!',
+                cancelButtonText: 'Cancel'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Submit delete form
+                    const form = document.createElement('form');
+                    form.method = 'POST';
+                    form.action = `/Transaction/Delete/${id}`;
+                    
+                    const token = document.createElement('input');
+                    token.type = 'hidden';
+                    token.name = '__RequestVerificationToken';
+                    token.value = document.querySelector('input[name="__RequestVerificationToken"]').value;
+                    
+                    form.appendChild(token);
+                    document.body.appendChild(form);
+                    form.submit();
+                }
+            });
+        }
+        
+        function showToast(message, type = 'info') {
+            const toastContainer = document.getElementById('toastContainer') || createToastContainer();
+            const toastId = 'toast-' + Date.now();
+            
+            const icon = {
+                'success': 'fa-check-circle',
+                'error': 'fa-exclamation-circle',
+                'warning': 'fa-exclamation-triangle',
+                'info': 'fa-info-circle'
+            }[type] || 'fa-bell';
+            
+            const toastHtml = `
+                <div id="${toastId}" class="toast align-items-center text-white bg-${type} border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="d-flex">
+                        <div class="toast-body">
+                            <i class="fas ${icon} me-2"></i>
+                            ${message}
+                        </div>
+                        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                </div>
+            `;
+            
+            toastContainer.innerHTML += toastHtml;
+            const toastElement = document.getElementById(toastId);
+            const toast = new bootstrap.Toast(toastElement, {
+                autohide: true,
+                delay: 3000
+            });
+            toast.show();
+            
+            toastElement.addEventListener('hidden.bs.toast', function () {
+                this.remove();
+            });
+        }
+        
+        function createToastContainer() {
+            const container = document.createElement('div');
+            container.id = 'toastContainer';
+            container.className = 'toast-container position-fixed top-0 end-0 p-3';
+            container.style.zIndex = '1060';
+            document.body.appendChild(container);
+            return container;
+        }
+    </script>
+}
