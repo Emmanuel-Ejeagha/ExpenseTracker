@@ -1,134 +1,640 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
     ViewData["isDashboard"] = true;
+    ViewData["PageTitle"] = "Dashboard";
+    ViewData["CurrentPage"] = "Dashboard";
 }
-@* Summary Widgets *@
+
+<!-- Period Selector -->
 <div class="row mb-4">
-    <div class="col-md-4">
-        <div class="d-flex flex-row widget summary income">
-            <div class="d-flex flex-column justify-content-center p-5">
-                <i class="fa-solid fa-naira-sign fa-2xl"></i>
-            </div>
-            <div class="d-flex flex-column m-auto py-3">
-                <span class="lead">Total Income</span>
-                <h1 class="display-6 fw-bold">@ViewBag.TotalIncome</h1>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-4">
-        <div class="d-flex flex-row widget summary expense">
-            <div class="d-flex flex-column justify-content-center p-5">
-                <i class="fa-solid fa-naira-sign fa-2xl"></i>
-            </div>
-            <div class="d-flex flex-column m-auto py-3">
-                <span class="lead">Total Expenses</span>
-                <h1 class="display-6 fw-bold">@ViewBag.TotalExpense</h1>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-4">
-        <div class="d-flex flex-row widget summary balance">
-            <div class="d-flex flex-column justify-content-center p-5">
-                <i class="fa-solid fa-naira-sign fa-2xl"></i>
-            </div>
-            <div class="d-flex flex-column m-auto py-3">
-                <span class="lead">Balance</span>
-                <h1 class="display-6 fw-bold">@ViewBag.Balance</h1>
+    <div class="col-md-12">
+        <div class="widget shadow-sm">
+            <div class="widget-body p-3">
+                <div class="d-flex flex-wrap justify-content-between align-items-center">
+                    <div>
+                        <h4 class="mb-0">
+                            <i class="fas fa-tachometer-alt me-2"></i>Financial Dashboard
+                        </h4>
+                        <p class="text-muted mb-0">Monitor your income, expenses, and financial health</p>
+                    </div>
+                    <div class="d-flex gap-2 mt-2 mt-md-0">
+                        <!-- Period Selector -->
+                        <div class="btn-group" role="group" aria-label="Period selector">
+                            <input type="radio" class="btn-check" name="period" id="periodToday" value="today" 
+                                   @(ViewBag.Period == "today" ? "checked" : "")>
+                            <label class="btn btn-outline-primary" for="periodToday">Today</label>
+                            
+                            <input type="radio" class="btn-check" name="period" id="periodWeek" value="week" 
+                                   @(ViewBag.Period == "week" ? "checked" : "")>
+                            <label class="btn btn-outline-primary" for="periodWeek">Week</label>
+                            
+                            <input type="radio" class="btn-check" name="period" id="periodMonth" value="month" 
+                                   @(ViewBag.Period == "month" ? "checked" : "")>
+                            <label class="btn btn-outline-primary" for="periodMonth">Month</label>
+                            
+                            <input type="radio" class="btn-check" name="period" id="periodYear" value="year" 
+                                   @(ViewBag.Period == "year" ? "checked" : "")>
+                            <label class="btn btn-outline-primary" for="periodYear">Year</label>
+                        </div>
+                        
+                        <!-- Refresh Button -->
+                        <button class="btn btn-sm btn-outline-primary" onclick="refreshDashboard()">
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Period Label -->
+                <div class="mt-3">
+                    <span class="badge bg-info">
+                        <i class="fas fa-calendar me-1"></i>
+                        @(ViewBag.PeriodLabel ?? "Last 7 Days")
+                    </span>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-@* Doughnut and Spline Chart *@
+<!-- Summary Cards -->
 <div class="row mb-4">
-    <div class="col-md-4">
-        <div class="widget chart">
-            <div class="p-4">
-                <h5 class="fw"-bold>Expense By Category</h5>
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="widget summary income h-100">
+            <div class="widget-body p-4">
+                <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                        <h6 class="text-muted mb-2">Total Income</h6>
+                        <h3 class="fw-bold mb-0">@(ViewBag.TotalIncome ?? "₦0")</h3>
+                        <div class="mt-2">
+                            <span class="badge bg-success">
+                                <i class="fas fa-arrow-up me-1"></i>
+                                @(ViewBag.IncomeCount ?? 0) transactions
+                            </span>
+                        </div>
+                    </div>
+                    <div class="icon-container">
+                        <i class="fas fa-arrow-up fa-2x text-success"></i>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <small class="text-muted">
+                        <i class="fas fa-info-circle me-1"></i>
+                        Total money received
+                    </small>
+                </div>
             </div>
-            <ejs-accumulationchart id="doughnutChart" background="#1a222b" >
-                <e-accumulation-series-collection>
-                    <e-accumulation-series dataSource="@ViewBag.DoughnutChartData" xName="categoryTitleWithIcon" yName="amount" innerRadius="60%" borderRadius="3" legendShape="Circle"
-                    palettes=@(new string[] {
-                    "#2E86AB", 
-                    "#A23B72", 
-                    "#F18F01", 
-                    "#C73E1D", 
-                    "#3B1C32", 
-                    "#5C8001", 
-                    "#7B9E89",
-                    "#D95D39", 
-                    "#2D3047",
-                    "#419D78"  }) >
-                        <e-accumulationseries-datalabel name="formattedAmount" visible></e-accumulationseries-datalabel>
-                    </e-accumulation-series>
-                </e-accumulation-series-collection>
-                <e-accumulationchart-legendsettings position="Top" toggleVisibility="false">
-                    <e-legendsettings-textstyle color="#fff" size="1rem"></e-legendsettings-textstyle>
-                </e-accumulationchart-legendsettings>
-                    <e-accumulationchart-tooltipsettings enable="true" ></e-accumulationchart-tooltipsettings>
-            </ejs-accumulationchart>
         </div>
     </div>
-    <div class="col-md-8">
-        <div class="widget chart">
-        <div class="p-4">
-            <h5 class="fw"-bold>Expense vs Income</h5>
+    
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="widget summary expense h-100">
+            <div class="widget-body p-4">
+                <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                        <h6 class="text-muted mb-2">Total Expenses</h6>
+                        <h3 class="fw-bold mb-0">@(ViewBag.TotalExpense ?? "₦0")</h3>
+                        <div class="mt-2">
+                            <span class="badge bg-danger">
+                                <i class="fas fa-arrow-down me-1"></i>
+                                @(ViewBag.ExpenseCount ?? 0) transactions
+                            </span>
+                        </div>
+                    </div>
+                    <div class="icon-container">
+                        <i class="fas fa-arrow-down fa-2x text-danger"></i>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <small class="text-muted">
+                        <i class="fas fa-info-circle me-1"></i>
+                        Total money spent
+                    </small>
+                </div>
+            </div>
         </div>
-            <ejs-chart id="spline-chart" background="#1a222b" palettes=@(new string[]{"#54ffa9", "#ffe91a"})>
-                <e-chart-primaryxaxis valueType="Category">
-                    <e-majorgridlines width="0"></e-majorgridlines>
-                    <e-majorgridlines width="0"></e-majorgridlines>
-                </e-chart-primaryxaxis>
-                <e-chart-primaryyaxis>
-                    <e-majorgridlines width="1" color="#32414d" dashArray="3,5"></e-majorgridlines>
-                    <e-majorticklines width="0"></e-majorticklines>
-                    <e-linestyle width="0"></e-linestyle>
-                </e-chart-primaryyaxis>
-                <e-chart-chartarea>
-                    <e-chartarea-border width="0"></e-chartarea-border>
-                </e-chart-chartarea>
-                <e-series-collection>
-                    <e-series dataSource="@ViewBag.SplineChartData" xName="day" yName="income" name="Income" width="3" type=@Syncfusion.EJ2.Charts.ChartSeriesType.Spline></e-series>
-                    <e-series dataSource="@ViewBag.SplineChartData" xName="day" yName="expense" name="Expense" width="3" type=@Syncfusion.EJ2.Charts.ChartSeriesType.Spline></e-series>
-                </e-series-collection>
-                <e-chart-legendsettings position="Top" alignment="Far" toggleVisibility="false">
-                    <e-legendsettings-textstyle color="#fff" size="1rem"></e-legendsettings-textstyle>
-                </e-chart-legendsettings>
-                <e-chart-tooltipsettings enable shared ></e-chart-tooltipsettings>
-
-            </ejs-chart>
+    </div>
+    
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="widget summary balance h-100">
+            <div class="widget-body p-4">
+                <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                        <h6 class="text-muted mb-2">Balance</h6>
+                        <h3 class="fw-bold mb-0">@(ViewBag.Balance ?? "₦0")</h3>
+                        <div class="mt-2">
+                            @{
+                                var balanceText = ViewBag.Balance?.ToString() ?? "₦0";
+                                var balanceClass = balanceText.Contains("-") ? "danger" : "success";
+                                var balanceIcon = balanceText.Contains("-") ? "arrow-down" : "arrow-up";
+                                var balanceLabel = balanceText.Contains("-") ? "Deficit" : "Surplus";
+                            }
+                            <span class="badge bg-@balanceClass">
+                                <i class="fas fa-@balanceIcon me-1"></i>
+                                @balanceLabel
+                            </span>
+                        </div>
+                    </div>
+                    <div class="icon-container">
+                        <i class="fas fa-scale-balanced fa-2x text-primary"></i>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <small class="text-muted">
+                        <i class="fas fa-info-circle me-1"></i>
+                        Net financial position
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="widget summary stats h-100">
+            <div class="widget-body p-4">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="text-center mb-3">
+                            <div class="text-muted small mb-1">Avg Daily Expense</div>
+                            <div class="h5 fw-bold">@(ViewBag.AverageDailyExpense ?? "₦0")</div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-center mb-3">
+                            <div class="text-muted small mb-1">Largest Expense</div>
+                            <div class="h5 fw-bold">@(ViewBag.LargestExpense ?? "₦0")</div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-center">
+                            <div class="text-muted small mb-1">Largest Income</div>
+                            <div class="h5 fw-bold">@(ViewBag.LargestIncome ?? "₦0")</div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-center">
+                            <div class="text-muted small mb-1">Total Transactions</div>
+                            <div class="h5 fw-bold">@((ViewBag.IncomeCount ?? 0) + (ViewBag.ExpenseCount ?? 0))</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-@* Recent Transactions and More  *@
+<!-- Charts -->
+<div class="row mb-4">
+    <div class="col-xl-8 col-lg-7 mb-4">
+        <div class="widget chart h-100">
+            <div class="widget-header">
+                <h5 class="fw-bold mb-0">
+                    <i class="fas fa-chart-line me-2"></i>Income vs Expense Trend
+                </h5>
+            </div>
+            <div class="widget-body">
+                <ejs-chart id="spline-chart" background="transparent" load="chartLoad">
+                    <e-chart-primaryxaxis valueType="Category" intervalType="Days" labelFormat="MMM-dd">
+                        <e-majorgridlines width="0"></e-majorgridlines>
+                        <e-majorticklines width="0"></e-majorticklines>
+                    </e-chart-primaryxaxis>
+                    <e-chart-primaryyaxis labelFormat="₦{value}" minimum="0">
+                        <e-majorgridlines width="1" color="#2a343f" dashArray="5,5"></e-majorgridlines>
+                        <e-majorticklines width="0"></e-majorticklines>
+                        <e-linestyle width="0"></e-linestyle>
+                    </e-chart-primaryyaxis>
+                    <e-chart-tooltipsettings enable="true" shared="true" format="₦{value}"></e-chart-tooltipsettings>
+                    <e-chart-legendsettings position="Top" alignment="Near" toggleVisibility="true">
+                        <e-legendsettings-textstyle color="#adb5bd" size="14px"></e-legendsettings-textstyle>
+                    </e-chart-legendsettings>
+                    <e-series-collection>
+                        <e-series dataSource="@(ViewBag.SplineChartData ?? new List<object>())" xName="day" yName="income" 
+                                 name="Income" width="2" type="Spline">
+                            <e-series-marker visible="true" width="8" height="8"></e-series-marker>
+                        </e-series>
+                        <e-series dataSource="@(ViewBag.SplineChartData ?? new List<object>())" xName="day" yName="expense" 
+                                 name="Expense" width="2" type="Spline">
+                            <e-series-marker visible="true" width="8" height="8"></e-series-marker>
+                        </e-series>
+                    </e-series-collection>
+                </ejs-chart>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-xl-4 col-lg-5 mb-4">
+        <div class="widget chart h-100">
+            <div class="widget-header">
+                <h5 class="fw-bold mb-0">
+                    <i class="fas fa-chart-pie me-2"></i>Expense by Category
+                </h5>
+            </div>
+            <div class="widget-body">
+                <ejs-accumulationchart id="doughnutChart" background="transparent" load="doughnutChartLoad">
+                    <e-accumulation-series-collection>
+                        <e-accumulation-series dataSource="@(ViewBag.DoughnutChartData ?? new List<object>())" 
+                                             xName="categoryTitleWithIcon" yName="amount" 
+                                             innerRadius="40%" radius="70%"
+                                             palettes='@(new string[] { "#0d6efd", "#20c997", "#fd7e14", "#6f42c1", "#e83e8c", "#ffc107", "#198754", "#0dcaf0", "#6610f2", "#d63384" })'>
+                            <e-accumulationseries-datalabel name="formattedAmount" visible="true" 
+                                                          position="Outside">
+                            </e-accumulationseries-datalabel>
+                        </e-accumulation-series>
+                    </e-accumulation-series-collection>
+                    <e-accumulationchart-legendsettings visible="true" position="Bottom" 
+                                                      toggleVisibility="true" height="30" width="100%">
+                        <e-legendsettings-textstyle color="#adb5bd" size="12px"></e-legendsettings-textstyle>
+                    </e-accumulationchart-legendsettings>
+                    <e-accumulationchart-tooltipsettings enable="true" format="${point.x}: <b>${point.y}</b>"></e-accumulationchart-tooltipsettings>
+                </ejs-accumulationchart>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recent Transactions & Quick Stats -->
 <div class="row">
-    <div class="col-md-6">
-        <div class="widget">
-            <div class="p-4">
-                <h5 class="fw-bold">Recent Transactions</h5>
+    <div class="col-xl-8 col-lg-7 mb-4">
+        <div class="widget h-100">
+            <div class="widget-header">
+                <h5 class="fw-bold mb-0">
+                    <i class="fas fa-history me-2"></i>Recent Transactions
+                </h5>
+                <a href="/Transaction" class="btn btn-sm btn-outline-primary">
+                    View All <i class="fas fa-arrow-right ms-1"></i>
+                </a>
             </div>
-            <div class="px-4 pb-4">
-                <ejs-grid id="recent-transactions" dataSource="@ViewBag.RecentTransactions" gridLines="None">
-                    <e-grid-columns>
-                        <e-grid-column headerText="Category" field="CategoryTitleWithIcon" ></e-grid-column>
-                        <e-grid-column headerText="Date" field="Date"  width="110px" format="MMM-dd-yy" textAlign="Left"></e-grid-column>
-                        <e-grid-column headerText="Amount" field="FormattedAmount"  width="110px" textAlign="Right"></e-grid-column>
-                    </e-grid-columns>
-                </ejs-grid>
+            <div class="widget-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th width="40%">Category</th>
+                                <th width="25%">Date</th>
+                                <th width="25%">Amount</th>
+                                <th width="10%"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (ViewBag.RecentTransactions != null)
+                            {
+                                foreach (var transaction in ViewBag.RecentTransactions)
+                                {
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <div class="category-icon-small me-2">
+                                                    <i class="@transaction.Category?.Icon"></i>
+                                                </div>
+                                                <div>
+                                                    <div class="fw-semibold">@transaction.Category?.Title</div>
+                                                    <small class="text-muted">@transaction.Note</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>@transaction.Date.ToString("MMM dd")</div>
+                                            <small class="text-muted">@(DateTime.Now.Subtract(transaction.Date).Days == 0 ? "Today" : 
+                                                DateTime.Now.Subtract(transaction.Date).Days == 1 ? "Yesterday" : 
+                                                DateTime.Now.Subtract(transaction.Date).Days + " days ago")</small>
+                                        </td>
+                                        <td>
+                                            <span class="@(transaction.Category?.Type == "Expense" ? "text-danger" : "text-success") fw-bold">
+                                                @((transaction.Category?.Type == "Expense" ? "- " : "+ ") + transaction.Amount.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-NG")))
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-outline-secondary" type="button" 
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="fas fa-ellipsis-v"></i>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-end">
+                                                    <li>
+                                                        <a class="dropdown-item" href="/Transaction/AddOrEdit/@transaction.TransactionId">
+                                                            <i class="fas fa-edit me-2"></i>Edit
+                                                        </a>
+                                                    </li>
+                                                    <li><hr class="dropdown-divider"></li>
+                                                    <li>
+                                                        <a class="dropdown-item text-danger" href="#" 
+                                                           onclick="deleteTransaction(@transaction.TransactionId)">
+                                                            <i class="fas fa-trash me-2"></i>Delete
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="4" class="text-center py-4">
+                                        <i class="fas fa-inbox fa-2x text-muted mb-3"></i>
+                                        <p class="text-muted">No recent transactions</p>
+                                        <a href="/Transaction/AddOrEdit" class="btn btn-sm btn-primary">
+                                            <i class="fas fa-plus me-1"></i> Add Transaction
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
-    <div class="col-md-6">
-        <div class="widget h-100">
-            <div class="d-flex justify-content-center align-items-center h-100">
-                <span><i class=" fa-solid fa-plus fa-2xl"></i>Widget</span>
+    
+    <div class="col-xl-4 col-lg-5 mb-4">
+        <!-- Quick Actions -->
+        <div class="widget">
+            <div class="widget-header">
+                <h5 class="fw-bold mb-0">
+                    <i class="fas fa-bolt me-2"></i>Quick Actions
+                </h5>
+            </div>
+            <div class="widget-body">
+                <div class="row g-2">
+                    <div class="col-6">
+                        <a href="/Transaction/AddOrEdit" class="btn btn-success w-100 h-100 d-flex flex-column align-items-center justify-content-center p-3">
+                            <i class="fas fa-plus-circle fa-2x mb-2"></i>
+                            <span>Add Transaction</span>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a href="/Transaction" class="btn btn-primary w-100 h-100 d-flex flex-column align-items-center justify-content-center p-3">
+                            <i class="fas fa-list fa-2x mb-2"></i>
+                            <span>View All</span>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a href="/Transaction/Export?format=excel" class="btn btn-info w-100 h-100 d-flex flex-column align-items-center justify-content-center p-3">
+                            <i class="fas fa-download fa-2x mb-2"></i>
+                            <span>Export</span>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a href="/Category" class="btn btn-warning w-100 h-100 d-flex flex-column align-items-center justify-content-center p-3">
+                            <i class="fas fa-folder fa-2x mb-2"></i>
+                            <span>Categories</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('Dashboard loaded');
+            
+            // Period selector
+            const periodRadios = document.querySelectorAll('input[name="period"]');
+            
+            periodRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    if (this.value !== '@ViewBag.Period') {
+                        updateDashboard(this.value);
+                    }
+                });
+            });
+            
+            // Initialize charts
+            initializeCharts();
+            
+            // Hide any existing loading overlay
+            hideLoading();
+        });
+        
+        function updateDashboard(period) {
+            showLoading();
+            
+            fetch(`/Dashboard/GetDashboardData?period=${period}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.success) {
+                        updateDashboardUI(data.data, data.periodLabel);
+                        showToast('Dashboard updated', 'success');
+                    } else {
+                        showToast(data.message || 'Error updating dashboard', 'error');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    showToast('Network error', 'error');
+                })
+                .finally(() => {
+                    hideLoading();
+                });
+        }
+        
+        function refreshDashboard() {
+            const selectedPeriod = document.querySelector('input[name="period"]:checked');
+            if (selectedPeriod) {
+                updateDashboard(selectedPeriod.value);
+            }
+        }
+        
+        function updateDashboardUI(data, periodLabel) {
+            // Update summary cards if data exists
+            if (data) {
+                // Update income card
+                const incomeCard = document.querySelector('.income h3');
+                if (incomeCard && data.totalIncome !== undefined) {
+                    incomeCard.textContent = formatCurrency(data.totalIncome);
+                }
+                
+                // Update expense card
+                const expenseCard = document.querySelector('.expense h3');
+                if (expenseCard && data.totalExpense !== undefined) {
+                    expenseCard.textContent = formatCurrency(data.totalExpense);
+                }
+                
+                // Update balance card
+                const balanceCard = document.querySelector('.balance h3');
+                if (balanceCard && data.balance !== undefined) {
+                    balanceCard.textContent = formatCurrency(data.balance);
+                    balanceCard.className = `fw-bold mb-0 ${data.balance < 0 ? 'text-danger' : 'text-success'}`;
+                }
+                
+                // Update period label
+                const periodBadge = document.querySelector('.badge.bg-info');
+                if (periodBadge && periodLabel) {
+                    periodBadge.innerHTML = `<i class="fas fa-calendar me-1"></i>${periodLabel}`;
+                }
+                
+                // Update charts if data exists
+                updateCharts(data);
+            }
+        }
+        
+        function formatCurrency(amount) {
+            return new Intl.NumberFormat('en-NG', {
+                style: 'currency',
+                currency: 'NGN',
+                minimumFractionDigits: 2
+            }).format(amount);
+        }
+        
+        function updateCharts(data) {
+            // Update spline chart
+            const splineChart = document.getElementById('spline-chart');
+            if (splineChart && splineChart.ej2_instances && splineChart.ej2_instances[0]) {
+                const chart = splineChart.ej2_instances[0];
+                if (data.dailySummary) {
+                    chart.series[0].dataSource = data.dailySummary;
+                    chart.series[1].dataSource = data.dailySummary;
+                    chart.refresh();
+                }
+            }
+            
+            // Update doughnut chart
+            const doughnutChart = document.getElementById('doughnutChart');
+            if (doughnutChart && doughnutChart.ej2_instances && doughnutChart.ej2_instances[0]) {
+                const chart = doughnutChart.ej2_instances[0];
+                if (data.expenseByCategory) {
+                    chart.series[0].dataSource = data.expenseByCategory;
+                    chart.refresh();
+                }
+            }
+        }
+        
+        function deleteTransaction(id) {
+            if (confirm('Are you sure you want to delete this transaction?')) {
+                fetch(`/Transaction/Delete/${id}`, {
+                    method: 'POST',
+                    headers: {
+                        'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        showToast('Transaction deleted successfully!', 'success');
+                        setTimeout(() => {
+                            window.location.reload();
+                        }, 1000);
+                    } else {
+                        showToast('Error deleting transaction', 'error');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    showToast('An error occurred', 'error');
+                });
+            }
+        }
+        
+        // Chart event handlers
+        function chartLoad(args) {
+            // Set chart theme
+            this.theme = 'Material';
+            this.loaded = function(args) {
+                console.log('Chart loaded');
+            };
+        }
+        
+        function doughnutChartLoad(args) {
+            // Set chart theme
+            this.theme = 'Material';
+            this.loaded = function(args) {
+                console.log('Doughnut chart loaded');
+            };
+        }
+        
+        // Loading indicator
+        function showLoading() {
+            // Use existing loading overlay from layout if available
+            const existingOverlay = document.getElementById('loading-overlay');
+            if (existingOverlay) {
+                existingOverlay.style.display = 'flex';
+            }
+        }
+        
+        function hideLoading() {
+            // Hide all loading overlays
+            const overlays = document.querySelectorAll('#loading-overlay, #loadingOverlay');
+            overlays.forEach(overlay => {
+                if (overlay) {
+                    overlay.style.display = 'none';
+                }
+            });
+        }
+        
+        // Toast notification
+        function showToast(message, type = 'info') {
+            // Simple alert for now - can be enhanced with a toast library
+            if (type === 'error') {
+                alert('Error: ' + message);
+            } else if (type === 'success') {
+                console.log('Success: ' + message);
+            } else {
+                console.log('Info: ' + message);
+            }
+        }
+        
+        function initializeCharts() {
+            // Initialize any additional chart settings
+            console.log('Charts initialized');
+        }
+    </script>
+    
+    <style>
+        /* Ensure proper chart sizing */
+        .e-chart, .e-accumulationchart {
+            height: 300px !important;
+        }
+        
+        /* Loading overlay fix */
+        #loading-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* Widget fixes */
+        .widget {
+            background: #1a222b;
+            border-radius: 10px;
+            border: 1px solid #2a343f;
+            margin-bottom: 20px;
+        }
+        
+        .widget-header {
+            padding: 15px 20px;
+            border-bottom: 1px solid #2a343f;
+        }
+        
+        .widget-body {
+            padding: 20px;
+        }
+        
+        /* Table fixes */
+        .table {
+            color: #adb5bd;
+            margin-bottom: 0;
+        }
+        
+        .table-light {
+            background-color: #2a343f;
+            color: #adb5bd;
+        }
+        
+        .table-hover tbody tr:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+    </style>
+}
