@@ -1,72 +1,887 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
     List<Object> menuItems = new List<Object>();
 
-    menuItems.Add(new{
-        text = "General",
-    });
-    menuItems.Add(new{
+    // Dashboard Section
+    menuItems.Add(new {
         text = "Dashboard",
         url = "/",
-        iconCss="fa-solid fa-box",
+        iconCss = "fas fa-tachometer-alt",
+        id = "dashboard"
     });
-        menuItems.Add(new{
+
+    // Separator
+    menuItems.Add(new {
+        separator = true,
+        text = "Management"
+    });
+
+    // Transactions
+    menuItems.Add(new {
+        text = "Transactions",
+        url = "/Transaction",
+        iconCss = "fas fa-exchange-alt",
+        id = "transactions"
+    });
+
+    // Categories
+    menuItems.Add(new {
         text = "Categories",
         url = "/Category",
-        iconCss="fa-solid fa-folder-closed",
+        iconCss = "fas fa-folder",
+        id = "categories"
     });
+
+    // Separator
     menuItems.Add(new {
-        text = "Transactions",
-        iconCss = "fa-solid fa-arrow-right-arrow-left",
-        url = "/Transaction",
+        separator = true,
+        text = "Analytics"
     });
-     menuItems.Add(new{
-        text = "Extras",
-    });
+
+    // Reports
     menuItems.Add(new {
         text = "Reports",
-        iconCss = "fa-solid fa-chart-simple",
-        url = "#",
+        iconCss = "fas fa-chart-pie",
+        id = "reports",
+        items = new[] {
+            new { text = "Monthly Report", id = "monthly-report", url = "#" },
+            new { text = "Yearly Summary", id = "yearly-summary", url = "#" },
+            new { text = "Category Analysis", id = "category-analysis", url = "#" },
+            new { text = "Trend Analysis", id = "trend-analysis", url = "#" }
+        }
     });
+
+    // Settings
     menuItems.Add(new {
-        text = "Transactions",
-        iconCss = "fa-solid fa-gear",
-        url = "#",
+        text = "Settings",
+        iconCss = "fas fa-cog",
+        id = "settings",
+        items = new[] {
+            new { text = "Profile", id = "profile", url = "#" },
+            new { text = "Preferences", id = "preferences", url = "#" },
+            new { text = "Notifications", id = "notifications", url = "#" },
+            new { text = "Security", id = "security", url = "#" }
+        }
+    });
+
+    // Help & Support
+    menuItems.Add(new {
+        text = "Help",
+        iconCss = "fas fa-question-circle",
+        id = "help",
+        items = new[] {
+            new { text = "Documentation", id = "documentation", url = "#" },
+            new { text = "Support", id = "support", url = "#" },
+            new { text = "Feedback", id = "feedback", url = "#" },
+            new { text = "About", id = "about", url = "#" }
+        }
     });
 }
 
-<ejs-sidebar id="sidebar" width="290px" enableDock dockSize=100px target=".dock-target" enableGestures="false">
+<ejs-sidebar id="sidebar" width="260px" 
+             enableDock="true" 
+             dockSize="70px" 
+             target=".dock-target"
+             enableGestures="false" 
+             closeOnDocumentClick="true" 
+             mediaQuery="(max-width: 992px)"
+             type="Over"
+             position="Left"
+             isOpen="true"
+             zIndex="1000">
     <e-content-template>
-
-        <div class="logo-wrapper">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header">
             <div class="app-logo">
-                <img src="~/logo.png" />
+                <img src="~/logo.png" alt="Expenses Tracker" class="logo-img" />
+                <span class="logo-text">Expenses Tracker</span>
             </div>
-            <div class="w-100"></div>
-            <i id="sidebar-toggler" class="fa-solid"></i>
+            <button id="sidebar-toggler" class="btn btn-link" type="button" aria-label="Toggle sidebar">
+                <i class="e-icons e-chevron-left"></i>
+            </button>
         </div>
 
-        <div class="profile-wrapper">
-            <img class="profile-pic" src="~/profilePic.jpg" />
-            <div class=" titlesd-flex flex-column ps-3">
-                <h6 class="mb-0 text-white">Wallet App</h6>
-                <span class="text-muted">Emmanuel Ejeagha</span>
+        <!-- User Profile -->
+        <div class="sidebar-profile">
+            <div class="profile-avatar">
+                <img src="~/profilePic.jpg" alt="User Avatar" />
+                <span class="online-status"></span>
+            </div>
+            <div class="profile-info">
+                <h6 class="profile-name">Emmanuel Ejeagha</h6>
+                <span class="profile-role">Premium User</span>
             </div>
         </div>
-        <ejs-menu id="menu"
-        items="menuItems"
-        orientation="Vertical"></ejs-menu>
+
+        <!-- Quick Stats -->
+        <div class="sidebar-stats">
+            <div class="stat-item">
+                <div class="stat-icon">
+                    <i class="fas fa-arrow-up text-success"></i>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-label">Income</span>
+                    <span class="stat-value" id="sidebar-income">₦0</span>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon">
+                    <i class="fas fa-arrow-down text-danger"></i>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-label">Expenses</span>
+                    <span class="stat-value" id="sidebar-expense">₦0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <ejs-menu id="sidebar-menu" 
+                  items="menuItems" 
+                  orientation="Vertical"
+                  cssClass="sidebar-menu"
+                  enableRtl="false"
+                  enableScrolling="true"
+                  select="onMenuSelect"
+                  beforeItemRender="onBeforeItemRender">
+            <e-menu-fieldsettings text="@("text")" iconCss="@("iconCss")" url="@("url")" items="@("items")" separator="@("separator")"></e-menu-fieldsettings>
+        </ejs-menu>
+
+        <!-- Sidebar Footer -->
+        <div class="sidebar-footer">
+            <button class="btn btn-sm btn-outline-light" onclick="toggleDarkMode()" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+                <span>Dark Mode</span>
+            </button>
+        </div>
     </e-content-template>
 </ejs-sidebar>
 
+<style>
+    /* ===== SIDEBAR STYLES ===== */
+    
+    /* Sidebar Base */
+    #sidebar {
+        background: linear-gradient(180deg, #12161d 0%, #1a222b 100%);
+        color: #adb5bd;
+        border-right: 1px solid #2a343f;
+        box-shadow: 3px 0 10px rgba(0, 0, 0, 0.1);
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1000;
+        overflow-y: auto;
+        transition: transform 0.3s ease, width 0.3s ease;
+    }
+    
+    /* Sidebar Header */
+    .sidebar-header {
+        padding: 1.25rem 1.5rem;
+        border-bottom: 1px solid #2a343f;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    
+    .app-logo {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        transition: opacity 0.3s ease;
+    }
+    
+    .logo-img {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+    
+    .logo-text {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: white;
+        white-space: nowrap;
+        transition: opacity 0.3s ease;
+    }
+    
+    #sidebar-toggler {
+        color: #adb5bd;
+        padding: 0.5rem;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #sidebar-toggler:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: white;
+    }
+    
+    #sidebar-toggler .e-icons {
+        font-size: 16px;
+        transition: transform 0.3s ease;
+    }
+    
+    /* User Profile */
+    .sidebar-profile {
+        padding: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        border-bottom: 1px solid #2a343f;
+        transition: padding 0.3s ease;
+    }
+    
+    .profile-avatar {
+        position: relative;
+        flex-shrink: 0;
+    }
+    
+    .profile-avatar img {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #4361ee;
+        transition: width 0.3s ease, height 0.3s ease;
+    }
+    
+    .online-status {
+        position: absolute;
+        bottom: 2px;
+        right: 2px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #10b981;
+        border: 2px solid #12161d;
+    }
+    
+    .profile-info {
+        flex-grow: 1;
+        min-width: 0;
+        transition: opacity 0.3s ease;
+        overflow: hidden;
+    }
+    
+    .profile-name {
+        color: white;
+        font-size: 0.95rem;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .profile-role {
+        color: #6c757d;
+        font-size: 0.8rem;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    /* Quick Stats */
+    .sidebar-stats {
+        padding: 1.5rem;
+        border-bottom: 1px solid #2a343f;
+        transition: padding 0.3s ease;
+    }
+    
+    .stat-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .stat-item:last-child {
+        margin-bottom: 0;
+    }
+    
+    .stat-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.1);
+        flex-shrink: 0;
+    }
+    
+    .stat-info {
+        flex-grow: 1;
+        min-width: 0;
+        transition: opacity 0.3s ease;
+        overflow: hidden;
+    }
+    
+    .stat-label {
+        display: block;
+        font-size: 0.8rem;
+        color: #6c757d;
+        margin-bottom: 0.25rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .stat-value {
+        display: block;
+        font-size: 1rem;
+        font-weight: 600;
+        color: white;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    /* Navigation Menu */
+    #sidebar-menu {
+        width: 100% !important;
+        background: transparent !important;
+        border: none !important;
+    }
+    
+    .e-menu-wrapper {
+        background: transparent !important;
+        border: none !important;
+    }
+    
+    .e-menu {
+        background: transparent !important;
+        border: none !important;
+        padding: 0.5rem 0 !important;
+    }
+    
+    .e-menu-item {
+        border-radius: 8px !important;
+        margin: 0.25rem 0.75rem !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .e-menu-item a {
+        color: #adb5bd !important;
+        font-weight: 500;
+        padding: 0.75rem 1rem !important;
+        border-radius: 8px;
+        transition: all 0.3s ease !important;
+        text-decoration: none !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+    
+    .e-menu-item a:hover {
+        color: white !important;
+        background-color: rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    .e-menu-item.e-focused > a,
+    .e-menu-item.e-selected > a {
+        color: white !important;
+        background-color: #4361ee !important;
+        box-shadow: 0 4px 6px -1px rgba(67, 97, 238, 0.3);
+    }
+    
+    .e-menu-icon {
+        color: inherit !important;
+        font-size: 1.1rem !important;
+        width: 24px !important;
+        margin-right: 0.75rem !important;
+        transition: margin-right 0.3s ease !important;
+    }
+    
+    /* Separator Items */
+    .e-menu-item.e-separator {
+        color: #6c757d !important;
+        font-size: 0.75rem !important;
+        font-weight: 600 !important;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding: 1rem 1rem 0.5rem !important;
+        pointer-events: none;
+        opacity: 0.7;
+        border-bottom: 1px solid #2a343f !important;
+        background: transparent !important;
+        margin: 0.5rem 0.75rem !important;
+    }
+    
+    .e-menu-item.e-separator:hover {
+        background: transparent !important;
+        cursor: default;
+    }
+    
+    /* Submenu Styles */
+    .e-menu-wrapper ul {
+        background-color: rgba(0, 0, 0, 0.2) !important;
+        border-radius: 8px !important;
+        margin: 0.5rem 0 !important;
+        padding: 0.25rem 0 !important;
+        border: none !important;
+    }
+    
+    .e-menu-wrapper ul .e-menu-item {
+        margin: 0.125rem 0.5rem !important;
+    }
+    
+    .e-menu-wrapper ul .e-menu-item a {
+        padding: 0.5rem 1rem !important;
+        font-size: 0.9rem !important;
+    }
+    
+    /* Sidebar Footer */
+    .sidebar-footer {
+        padding: 1rem;
+        border-top: 1px solid #2a343f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        bottom: 0;
+        background: linear-gradient(180deg, #12161d 0%, #1a222b 100%);
+    }
+    
+    .sidebar-footer .btn {
+        color: #adb5bd;
+        padding: 0.375rem 0.75rem;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        background: transparent;
+        border: 1px solid #6c757d;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .sidebar-footer .btn:hover {
+        color: white;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-color: #adb5bd;
+    }
+    
+    /* ===== COLLAPSED STATE ===== */
+    #sidebar.e-close:not(.e-dock) {
+        transform: translateX(-100%);
+    }
+    
+    #sidebar.e-dock {
+        width: 70px !important;
+    }
+    
+    #sidebar.e-dock .logo-text,
+    #sidebar.e-dock .profile-info,
+    #sidebar.e-dock .stat-info,
+    #sidebar.e-dock .sidebar-footer span,
+    #sidebar.e-dock .e-menu-text,
+    #sidebar.e-dock .e-menu-item.e-separator {
+        display: none !important;
+    }
+    
+    #sidebar.e-dock .app-logo {
+        justify-content: center;
+    }
+    
+    #sidebar.e-dock .sidebar-profile {
+        justify-content: center;
+        padding: 1rem;
+    }
+    
+    #sidebar.e-dock .profile-avatar img {
+        width: 36px;
+        height: 36px;
+    }
+    
+    #sidebar.e-dock .sidebar-stats {
+        padding: 1rem;
+    }
+    
+    #sidebar.e-dock .stat-item {
+        justify-content: center;
+    }
+    
+    #sidebar.e-dock .e-menu-icon {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+    
+    #sidebar.e-dock .e-menu-item a {
+        justify-content: center;
+        padding: 0.75rem !important;
+    }
+    
+    #sidebar.e-dock .sidebar-footer {
+        justify-content: center;
+        padding: 0.5rem;
+    }
+    
+    #sidebar.e-dock .sidebar-footer .btn {
+        padding: 0.375rem;
+        justify-content: center;
+    }
+    
+    /* Toggler Icon Rotation */
+    #sidebar.e-dock #sidebar-toggler .e-icons {
+        transform: rotate(180deg);
+    }
+    
+    #sidebar:not(.e-dock) #sidebar-toggler .e-icons {
+        transform: rotate(0deg);
+    }
+    
+    /* ===== MOBILE RESPONSIVE ===== */
+    @@media (max-width: 992px) {
+        #sidebar {
+            position: fixed !important;
+            z-index: 1045;
+            transform: translateX(-100%);
+            box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        #sidebar.e-open {
+            transform: translateX(0);
+        }
+        
+        .dock-target {
+            margin-left: 0 !important;
+            width: 100% !important;
+        }
+    }
+    
+    /* ===== DESKTOP DOCKED STATE ===== */
+    @@media (min-width: 993px) {
+        .dock-target {
+            margin-left: 260px;
+            transition: margin-left 0.3s ease;
+            width: calc(100% - 260px);
+        }
+        
+        #sidebar.e-dock + .dock-target {
+            margin-left: 70px;
+            width: calc(100% - 70px);
+        }
+        
+        #sidebar:not(.e-open) + .dock-target {
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+    
+    /* ===== ACCESSIBILITY ===== */
+    .e-menu-item:focus,
+    #sidebar-toggler:focus {
+        outline: 2px solid #4361ee;
+        outline-offset: 2px;
+    }
+    
+    /* ===== CUSTOM SCROLLBAR ===== */
+    #sidebar::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    #sidebar::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+    }
+    
+    #sidebar::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 3px;
+    }
+    
+    #sidebar::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.3);
+    }
+</style>
 
 <script>
+    // Initialize when DOM is fully loaded
     document.addEventListener('DOMContentLoaded', function () {
-        dockBar = document.getElementById('sidebar').ej2_instances[0];
-        document.getElementById('sidebar-toggler').onclick = function (){
-            dockBar.toggle();
+        // Initialize sidebar
+        initializeSidebar();
+        
+        // Initialize menu
+        initializeMenu();
+        
+        // Setup event listeners
+        setupEventListeners();
+        
+        // Update sidebar stats
+        updateSidebarStats();
+    });
+    
+    function initializeSidebar() {
+        const sidebarElement = document.getElementById('sidebar');
+        if (!sidebarElement) return;
+        
+        // Check if sidebar is already initialized
+        if (sidebarElement.ej2_instances && sidebarElement.ej2_instances.length > 0) {
+            return;
         }
-    })
+        
+        // Create sidebar instance
+        const sidebar = new ej.navigations.Sidebar({
+            width: '260px',
+            enableDock: true,
+            dockSize: '70px',
+            target: '.dock-target',
+            enableGestures: false,
+            closeOnDocumentClick: true,
+            mediaQuery: '(max-width: 992px)',
+            type: 'Over',
+            position: 'Left',
+            isOpen: true,
+            zIndex: 1000,
+            open: onSidebarOpen,
+            close: onSidebarClose,
+            change: onSidebarChange
+        });
+        
+        sidebar.appendTo('#sidebar');
+        
+        // Store reference globally for easy access
+        window.appSidebar = sidebar;
+        
+        // Update toggle icon initially
+        updateToggleIcon();
+    }
+    
+    function initializeMenu() {
+        const menuElement = document.getElementById('sidebar-menu');
+        if (!menuElement) return;
+        
+        // Check if menu is already initialized
+        if (menuElement.ej2_instances && menuElement.ej2_instances.length > 0) {
+            return;
+        }
+        
+        // Create menu instance using the menuItems from Razor
+        const menu = new ej.navigations.Menu({
+            items: @Html.Raw(Json.Serialize(menuItems)),
+            orientation: 'Vertical',
+            cssClass: 'sidebar-menu',
+            enableRtl: false,
+            enableScrolling: true,
+            select: onMenuSelect,
+            beforeItemRender: onBeforeItemRender,
+            fields: {
+                text: 'text',
+                iconCss: 'iconCss',
+                url: 'url',
+                items: 'items',
+                separator: 'separator'
+            }
+        });
+        
+        menu.appendTo('#sidebar-menu');
+        
+        // Store reference globally
+        window.appMenu = menu;
+    }
+    
+    function setupEventListeners() {
+        // Sidebar toggle button
+        const toggler = document.getElementById('sidebar-toggler');
+        if (toggler) {
+            toggler.addEventListener('click', toggleSidebar);
+        }
+        
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', function(event) {
+            if (window.innerWidth < 993 && window.appSidebar && window.appSidebar.isOpen) {
+                if (!document.getElementById('sidebar').contains(event.target) && 
+                    !event.target.closest('#mobileMenuToggle')) {
+                    window.appSidebar.hide();
+                    document.body.classList.remove('sidebar-open');
+                }
+            }
+        });
+        
+        // Keyboard shortcuts
+        document.addEventListener('keydown', function(event) {
+            // Ctrl+B to toggle sidebar
+            if (event.ctrlKey && event.key === 'b') {
+                event.preventDefault();
+                toggleSidebar();
+            }
+            
+            // Escape to close sidebar on mobile
+            if (event.key === 'Escape' && window.innerWidth < 993 && 
+                window.appSidebar && window.appSidebar.isOpen) {
+                window.appSidebar.hide();
+                document.body.classList.remove('sidebar-open');
+            }
+        });
+        
+        // Window resize handling
+        let resizeTimer;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function() {
+                if (window.innerWidth >= 993 && window.appSidebar) {
+                    // On desktop, ensure sidebar is open
+                    window.appSidebar.show();
+                    document.body.classList.remove('sidebar-open');
+                } else if (window.innerWidth < 993 && window.appSidebar) {
+                    // On mobile, ensure sidebar is closed initially
+                    window.appSidebar.hide();
+                }
+            }, 250);
+        });
+    }
+    
+    // Sidebar event handlers
+    function onSidebarOpen(args) {
+        console.log('Sidebar opened');
+        if (window.innerWidth < 993) {
+            document.body.classList.add('sidebar-open');
+        }
+        updateToggleIcon();
+    }
+    
+    function onSidebarClose(args) {
+        console.log('Sidebar closed');
+        if (window.innerWidth < 993) {
+            document.body.classList.remove('sidebar-open');
+        }
+        updateToggleIcon();
+    }
+    
+    function onSidebarChange(args) {
+        console.log('Sidebar state changed:', args.type);
+        updateToggleIcon();
+    }
+    
+    // Menu event handlers
+    window.onMenuSelect = function(args) {
+        console.log('Menu item selected:', args.item);
+        
+        if (args.item && args.item.url && args.item.url !== '#') {
+            // Navigate to the URL
+            window.location.href = args.item.url;
+        }
+        
+        // Close sidebar on mobile after selection
+        if (window.innerWidth < 993 && window.appSidebar) {
+            window.appSidebar.hide();
+            document.body.classList.remove('sidebar-open');
+        }
+    };
+    
+    window.onBeforeItemRender = function(args) {
+        // Add any custom rendering logic here
+        if (args.element) {
+            // Add ARIA attributes for accessibility
+            if (args.item.url && args.item.url !== '#') {
+                args.element.setAttribute('role', 'menuitem');
+                args.element.setAttribute('tabindex', '0');
+            }
+            
+            // Highlight active menu item based on current URL
+            const currentPath = window.location.pathname.toLowerCase();
+            const itemUrl = (args.item.url || '').toLowerCase();
+            
+            if (itemUrl && currentPath === itemUrl) {
+                args.element.classList.add('e-selected');
+            }
+        }
+    };
+    
+    // Toggle sidebar function
+    function toggleSidebar() {
+        if (window.appSidebar) {
+            window.appSidebar.toggle();
+            updateToggleIcon();
+        }
+    }
+    
+    // Update toggle icon based on sidebar state
+    function updateToggleIcon() {
+        const toggler = document.getElementById('sidebar-toggler');
+        if (!toggler || !window.appSidebar) return;
+        
+        const icon = toggler.querySelector('.e-icons');
+        if (icon) {
+            if (window.appSidebar.isOpen && !window.appSidebar.isDock) {
+                // Expanded state
+                icon.className = 'e-icons e-chevron-left';
+                icon.setAttribute('aria-label', 'Collapse sidebar');
+            } else if (window.appSidebar.isDock) {
+                // Docked/collapsed state
+                icon.className = 'e-icons e-chevron-right';
+                icon.setAttribute('aria-label', 'Expand sidebar');
+            } else {
+                // Closed state (mobile)
+                icon.className = 'e-icons e-chevron-right';
+                icon.setAttribute('aria-label', 'Open sidebar');
+            }
+        }
+    }
+    
+    // Update sidebar stats
+    function updateSidebarStats() {
+        // This function would typically fetch data from an API
+        // For now, we'll use placeholder values
+        const incomeEl = document.getElementById('sidebar-income');
+        const expenseEl = document.getElementById('sidebar-expense');
+        
+        if (incomeEl) incomeEl.textContent = '₦150,000';
+        if (expenseEl) expenseEl.textContent = '₦45,000';
+        
+        // Uncomment to fetch real data:
+        /*
+        fetch('/Dashboard/GetFinancialSummary')
+            .then(response => response.json())
+            .then(data => {
+                if (data && data.success) {
+                    if (incomeEl) incomeEl.textContent = formatCurrency(data.data?.monthlyIncome || 0);
+                    if (expenseEl) expenseEl.textContent = formatCurrency(data.data?.monthlyExpense || 0);
+                }
+            })
+            .catch(console.error);
+        */
+    }
+    
+    // Dark mode toggle
+    window.toggleDarkMode = function() {
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        if (isDarkMode) {
+            document.documentElement.classList.remove('dark-mode');
+            localStorage.setItem('theme', 'light');
+        } else {
+            document.documentElement.classList.add('dark-mode');
+            localStorage.setItem('theme', 'dark');
+        }
+        
+        // Dispatch event for other components to respond
+        window.dispatchEvent(new CustomEvent('themechange', {
+            detail: { theme: isDarkMode ? 'light' : 'dark' }
+        }));
+    };
+    
+    // Utility function to format currency
+    function formatCurrency(amount) {
+        return new Intl.NumberFormat('en-NG', {
+            style: 'currency',
+            currency: 'NGN',
+            minimumFractionDigits: 0
+        }).format(amount);
+    }
+    
+    // Initialize current theme
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    if (currentTheme === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+    }
 </script>
