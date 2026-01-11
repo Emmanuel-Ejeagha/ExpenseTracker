@@ -1,42 +1,243 @@
 @model ExpensesTracker.Models.Category
 
 @{
-    ViewData["PageTitle"] = Model.CategoryId == 0 ? "Create a new category" : "Edit category";
+    ViewData["PageTitle"] = Model.CategoryId == 0 ? "Create New Category" : "Edit Category";
+    ViewData["PageActionText"] = "← Back to List";
+    ViewData["PageActionUrl"] = "/Category";
 }
 
-<hr />
-<div class="row">
-    <div class="col-md-7">
-        <div class="widget p-5">
-            <form asp-action="AddOrEdit">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <Input type="hidden" name="CategoryId" value="@Model.CategoryId"/>
-                <div class="mb-3">
-                    <div class='e-btn-group custom-rbt-group'>
-                        <input type="radio" id="radioleft" name="Type" value="Expense" checked="@(Model.Type=="Expense")" />
-                        <label class="e-btn" for="radioleft">Expense</label>
-                        <input type="radio" id="radiomiddle" name="Type" value="Income" checked="@(Model.Type=="Income")" />
-                        <label class="e-btn" for="radiomiddle">Income</label>                    
+<div class="row justify-content-center">
+    <div class="col-xxl-6 col-xl-8 col-lg-10 col-md-12">
+        <div class="widget shadow-sm">
+            <div class="widget-header bg-gradient-primary text-white p-4 rounded-top">
+                <h4 class="mb-0">
+                    <i class="fas @(Model.CategoryId == 0 ? "fa-plus-circle" : "fa-edit") me-2"></i>
+                    @ViewData["PageTitle"]
+                </h4>
+                <p class="mb-0 opacity-75">@(Model.CategoryId == 0 ? "Add a new expense or income category" : "Modify existing category details")</p>
+            </div>
+            
+            <div class="widget-body p-4">
+                <form asp-action="AddOrEdit" id="categoryForm" class="needs-validation" novalidate>
+                    @Html.AntiForgeryToken()
+                    
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+                    
+                    <input type="hidden" asp-for="CategoryId" />
+                    
+                    <div class="row g-3">
+                        <!-- Category Type -->
+                        <div class="col-md-12">
+                            <label class="form-label fw-semibold">Category Type *</label>
+                            <div class="btn-group w-100" role="group" aria-label="Category type">
+                                <input type="radio" class="btn-check" name="Type" id="typeExpense" value="Expense" 
+                                       @(Model.Type == "Expense" ? "checked" : "") required>
+                                <label class="btn btn-outline-danger" for="typeExpense">
+                                    <i class="fas fa-arrow-down me-2"></i>Expense
+                                </label>
+                                
+                                <input type="radio" class="btn-check" name="Type" id="typeIncome" value="Income"
+                                       @(Model.Type == "Income" ? "checked" : "")>
+                                <label class="btn btn-outline-success" for="typeIncome">
+                                    <i class="fas fa-arrow-up me-2"></i>Income
+                                </label>
+                            </div>
+                            <span asp-validation-for="Type" class="text-danger small"></span>
+                            <div class="form-text">Select whether this category is for tracking expenses or income</div>
+                        </div>
+
+                        <!-- Category Name -->
+                        <div class="col-md-8">
+                            <div class="form-floating">
+                                <input asp-for="Title" class="form-control" placeholder="Category name" required />
+                                <label asp-for="Title">Category Name *</label>
+                                <span asp-validation-for="Title" class="text-danger small"></span>
+                            </div>
+                        </div>
+
+                        <!-- Icon -->
+                        <div class="col-md-4">
+                            <div class="form-floating">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light">
+                                        <i class="fas @(string.IsNullOrEmpty(Model.Icon) ? "fa-icons" : Model.Icon)" id="iconPreview"></i>
+                                    </span>
+                                    <input asp-for="Icon" class="form-control" placeholder="Icon" 
+                                           id="iconInput" aria-describedby="iconHelp" />
+                                    <button type="button" class="btn btn-outline-secondary" id="iconPickerBtn"
+                                            data-bs-toggle="modal" data-bs-target="#iconPickerModal">
+                                        <i class="fas fa-palette"></i>
+                                    </button>
+                                </div>
+                                <label asp-for="Icon" class="form-label">Icon</label>
+                            </div>
+                            <div id="iconHelp" class="form-text">Enter Font Awesome icon class (e.g., fa-home)</div>
+                            <span asp-validation-for="Icon" class="text-danger small"></span>
+                        </div>
+
+                        <!-- Preview -->
+                        <div class="col-12">
+                            <div class="card border-dashed">
+                                <div class="card-body text-center">
+                                    <h6 class="card-subtitle mb-2 text-muted">Preview</h6>
+                                    <div class="display-4 mb-3">
+                                        <span class="badge @(Model.Type == "Expense" ? "bg-danger" : "bg-success") p-3">
+                                            <i class="@(string.IsNullOrEmpty(Model.Icon) ? "fas fa-tag" : Model.Icon) me-2"></i>
+                                            <span id="titlePreview">@(string.IsNullOrEmpty(Model.Title) ? "Category Name" : Model.Title)</span>
+                                        </span>
+                                    </div>
+                                    <p class="text-muted mb-0">This is how your category will appear in lists and dropdowns</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="mb-3">
-                    <ejs-textbox id="title" placeholder="Title" ejs-for="Title" floatLabelType="Always"></ejs-textbox>
-                    <span asp-validation-for="Title" class="text-danger" fs-3></span>
-                </div>
-                <div class="mb-3">
-                    <ejs-textbox id="icon" placeholder="Icon" ejs-for="Icon" floatLabelType="Always"></ejs-textbox>
-                </div>
-                <div>
-                    <ejs-button id="submit" type="submit" content="Submit" cssClass="e-success"></ejs-button>
-                </div>
-            </form>
-        </div>
-    </div>
-    <div class="col-md-5">
-        <div class="widget h-100 d-flex justify-content-center align-items-center" style="background-color:#212b36">
-            <i class="fa-solid fa-shapes fa-2xl"></i>
+
+                    <!-- Form Actions -->
+                    <div class="row mt-4">
+                        <div class="col-12">
+                            <div class="d-flex justify-content-between">
+                                <a href="@ViewData["PageActionUrl"]" class="btn btn-outline-secondary">
+                                    <i class="fas fa-arrow-left me-2"></i>Cancel
+                                </a>
+                                <button type="submit" class="btn btn-primary px-4">
+                                    <i class="fas @(Model.CategoryId == 0 ? "fa-save" : "fa-check") me-2"></i>
+                                    @(Model.CategoryId == 0 ? "Create Category" : "Update Category")
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
 
+<!-- Icon Picker Modal -->
+<div class="modal fade" id="iconPickerModal" tabindex="-1" aria-labelledby="iconPickerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="iconPickerModalLabel">
+                    <i class="fas fa-icons me-2"></i>Select an Icon
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row g-2" id="iconGrid">
+                    <!-- Icons will be populated by JavaScript -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="selectIconBtn">Select Icon</button>
+            </div>
+        </div>
+    </div>
+</div>
 
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Update preview on input change
+            const titleInput = document.getElementById('Title');
+            const iconInput = document.getElementById('iconInput');
+            const titlePreview = document.getElementById('titlePreview');
+            const iconPreview = document.getElementById('iconPreview');
+            const typeExpense = document.getElementById('typeExpense');
+            const typeIncome = document.getElementById('typeIncome');
+            
+            function updatePreview() {
+                titlePreview.textContent = titleInput.value || 'Category Name';
+                iconPreview.className = `fas ${iconInput.value || 'fa-icons'}`;
+                
+                // Update badge color based on type
+                const previewBadge = document.querySelector('.display-4 .badge');
+                if (typeExpense.checked) {
+                    previewBadge.classList.remove('bg-success');
+                    previewBadge.classList.add('bg-danger');
+                } else if (typeIncome.checked) {
+                    previewBadge.classList.remove('bg-danger');
+                    previewBadge.classList.add('bg-success');
+                }
+            }
+            
+            titleInput.addEventListener('input', updatePreview);
+            iconInput.addEventListener('input', updatePreview);
+            typeExpense.addEventListener('change', updatePreview);
+            typeIncome.addEventListener('change', updatePreview);
+            
+            // Initialize preview
+            updatePreview();
+            
+            // Icon picker functionality
+            const iconPickerBtn = document.getElementById('iconPickerBtn');
+            const iconGrid = document.getElementById('iconGrid');
+            const selectIconBtn = document.getElementById('selectIconBtn');
+            let selectedIcon = '';
+            
+            // Popular Font Awesome icons for categories
+            const popularIcons = [
+                'fa-home', 'fa-utensils', 'fa-car', 'fa-shopping-cart', 'fa-film',
+                'fa-heartbeat', 'fa-graduation-cap', 'fa-plane', 'fa-gamepad',
+                'fa-tshirt', 'fa-book', 'fa-music', 'fa-dumbbell', 'fa-paw',
+                'fa-wifi', 'fa-bolt', 'fa-water', 'fa-gas-pump', 'fa-phone',
+                'fa-laptop', 'fa-tv', 'fa-couch', 'fa-bed', 'fa-shower',
+                'fa-tools', 'fa-briefcase', 'fa-money-bill-wave', 'fa-credit-card',
+                'fa-university', 'fa-piggy-bank', 'fa-chart-line', 'fa-gift',
+                'fa-ambulance', 'fa-pills', 'fa-stethoscope', 'fa-heart',
+                'fa-baby', 'fa-child', 'fa-user-graduate', 'fa-theater-masks',
+                'fa-football-ball', 'fa-basketball-ball', 'fa-swimming-pool',
+                'fa-hiking', 'fa-bicycle', 'fa-motorcycle', 'fa-bus',
+                'fa-train', 'fa-taxi', 'fa-ship', 'fa-route',
+                'fa-coffee', 'fa-beer', 'fa-cocktail', 'fa-pizza-slice',
+                'fa-hamburger', 'fa-ice-cream', 'fa-cookie', 'fa-cake',
+                'fa-seedling', 'fa-leaf', 'fa-tree', 'fa-cloud-sun',
+                'fa-umbrella', 'fa-snowflake', 'fa-fire', 'fa-star'
+            ];
+            
+            // Populate icon grid
+            popularIcons.forEach(icon => {
+                const col = document.createElement('div');
+                col.className = 'col-2 col-sm-1';
+                
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'btn btn-outline-primary w-100 py-3';
+                btn.innerHTML = `<i class="fas ${icon} fa-lg"></i>`;
+                btn.dataset.icon = icon;
+                
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    document.querySelectorAll('#iconGrid button').forEach(b => {
+                        b.classList.remove('active');
+                    });
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    selectedIcon = this.dataset.icon;
+                });
+                
+                col.appendChild(btn);
+                iconGrid.appendChild(col);
+            });
+            
+            // Select icon button
+            selectIconBtn.addEventListener('click', function() {
+                if (selectedIcon) {
+                    iconInput.value = selectedIcon;
+                    updatePreview();
+                    bootstrap.Modal.getInstance(document.getElementById('iconPickerModal')).hide();
+                }
+            });
+            
+            // Form validation
+            const form = document.getElementById('categoryForm');
+            form.addEventListener('submit', function(event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    </script>
+}
