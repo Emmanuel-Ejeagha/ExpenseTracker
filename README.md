@@ -1,6 +1,6 @@
-# Expense Tracker Pro - SaaS Application
+# Expense Tracker 
 
-A professional expense tracking SaaS application built with ASP.NET MVC, and Syncfusion components.
+An expense tracking application built with ASP.NET MVC, and Syncfusion components.
 
 ## Features
 
